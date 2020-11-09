@@ -666,6 +666,7 @@ void addPictureData(void **object)
         else
         {
             //RLE is suitable for this image, let's do it
+            picture->options |= 0x04;
             new_data = (unsigned char *)malloc(changes * sizeof(uint16_t));
             memset(new_data, 0x00, changes * 2);
             val = data[0];
