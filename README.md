@@ -35,3 +35,11 @@ Compiler command to get started:
 ```
 g++ pooleditparser.cxx xml.cxx parser.cxx -o pooleditparser -lexpat -O2 -W -Wall -Wextra -pedantic
 ```
+It's also possible to compile using Cmake
+```
+mkdir build
+cd build
+cmake ..
+make
+```
+have fun.
