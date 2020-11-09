@@ -30,7 +30,8 @@
 #define VERSION "1.5.0"
 
 // linked list node
-struct node {
+struct node
+{
     char *head;
     struct node *tail;
 };
@@ -58,8 +59,9 @@ int firstByte = true;
 void addToList(char *bff)
 {
     // allocate and init new node
-    node_t *node = (node_t *) malloc(sizeof(node_t));
-    if (node == NULL) {
+    node_t *node = (node_t *)malloc(sizeof(node_t));
+    if (node == NULL)
+    {
         printf("out of memory!\n");
         exit(-1);
     }
@@ -67,11 +69,13 @@ void addToList(char *bff)
     node->tail = NULL;
 
     // add node to list
-    if (list_start == NULL) {
+    if (list_start == NULL)
+    {
         list_start = node;
         list_end = node;
     }
-    else {
+    else
+    {
         list_end->tail = node;
         list_end = node;
     }
@@ -83,7 +87,8 @@ void addToList(char *bff)
 void printList()
 {
     node_t *node = list_start;
-    while (node != NULL) {
+    while (node != NULL)
+    {
         fprintf(fileOut, "%s", node->head);
         node = node->tail;
     }
@@ -94,17 +99,21 @@ void printList()
 //
 void ascii_ready(char *data, int length)
 {
-    for (int i = 0; i < length; i++) {
-        if (firstByte) {
+    for (int i = 0; i < length; i++)
+    {
+        if (firstByte)
+        {
             firstByte = false;
         }
-        else {
+        else
+        {
             fprintf(fileOut, ", ");
-            if (i == 0) {
+            if (i == 0)
+            {
                 fprintf(fileOut, "\n  ");
             }
         }
-        fprintf(fileOut, "%i", (unsigned char) data[i]);
+        fprintf(fileOut, "%i", (unsigned char)data[i]);
     }
     pool_size += length;
     nro_total_objects++;
@@ -115,8 +124,9 @@ void ascii_ready(char *data, int length)
 //
 void binary_ready(char *data, int length)
 {
-    for (int i = 0; i < length; i++) {
-        fputc((unsigned char) data[i], fileOut);
+    for (int i = 0; i < length; i++)
+    {
+        fputc((unsigned char)data[i], fileOut);
     }
     pool_size += length;
     nro_total_objects++;
@@ -125,10 +135,10 @@ void binary_ready(char *data, int length)
 //
 // callback function
 //
-void starts(void *userData, char *el, const char ** attr)
+void starts(void *userData, char *el, const char **attr)
 {
-    (void) userData;
-    (void) el;
+    (void)userData;
+    (void)el;
 
     char tmp[256];
     char *bff;
@@ -136,7 +146,8 @@ void starts(void *userData, char *el, const char ** attr)
     int id;
     int len;
 
-    if (depth == 1) {
+    if (depth == 1)
+    {
         name = getName(attr);
         id = getId(attr);
 
@@ -144,7 +155,7 @@ void starts(void *userData, char *el, const char ** attr)
         // string
         sprintf(tmp, "#define %s %d\n", name, id);
         len = strlen(tmp) + 1;
-        bff = (char *) malloc(len);
+        bff = (char *)malloc(len);
         memcpy(bff, tmp, len);
 
         addToList(bff);
@@ -159,8 +170,8 @@ void starts(void *userData, char *el, const char ** attr)
 //
 void ends(void *userData, char *el)
 {
-    (void) userData;
-    (void) el;
+    (void)userData;
+    (void)el;
     depth--;
 }
 
@@ -187,93 +198,111 @@ int main(int argc, char *argv[])
     int skHeight = 32;
     int colors = 256;
 
-    for (int i = 0; i < argc; i++) {
-	if (strncmp("-v", argv[i], 2) == 0) {
-	    printf("version: %s\n", VERSION);
-	    exit(0);
-	}
+    for (int i = 0; i < argc; i++)
+    {
+        if (strncmp("-v", argv[i], 2) == 0)
+        {
+            printf("version: %s\n", VERSION);
+            exit(0);
+        }
     }
-    
+
     // check arguments
-    if (argc < 3) {
+    if (argc < 3)
+    {
         printUseage();
         exit(-1);
     }
 
     // open files
     fileIn = fopen(argv[1], "r");
-    if (fileIn == NULL) {
+    if (fileIn == NULL)
+    {
         printf("Can't open file: %s\n", argv[1]);
         exit(-2);
     }
 
     fileOut = fopen(argv[2], "w");
-    if (fileOut == NULL) {
+    if (fileOut == NULL)
+    {
         printf("Can't open file: %s\n", argv[2]);
         exit(-3);
     }
 
     // evaluate other arguments
-    for (int i = 3; i < argc; i++) {
-        if (strncmp("-d=", argv[i], 3) == 0) {
+    for (int i = 3; i < argc; i++)
+    {
+        if (strncmp("-d=", argv[i], 3) == 0)
+        {
             strtok(argv[i], "=");
             dimension = atoi(strtok(NULL, "="));
         }
-        else if (strncmp("-sw=", argv[i], 4) == 0) {
+        else if (strncmp("-sw=", argv[i], 4) == 0)
+        {
             strtok(argv[i], "=");
             skWidth = atoi(strtok(NULL, "="));
         }
-        else if (strncmp("-sh=", argv[i], 4) == 0) {
+        else if (strncmp("-sh=", argv[i], 4) == 0)
+        {
             strtok(argv[i], "=");
             skHeight = atoi(strtok(NULL, "="));
         }
-        else if (strncmp("-c=", argv[i], 3) == 0) {
+        else if (strncmp("-c=", argv[i], 3) == 0)
+        {
             strtok(argv[i], "=");
             colors = atoi(strtok(NULL, "="));
         }
-        else if (strncmp("-table", argv[i], 6) == 0) {
+        else if (strncmp("-table", argv[i], 6) == 0)
+        {
             printTable = true;
         }
-        else {
+        else
+        {
             printUseage();
             exit(-1);
         }
     }
 
     // sanity checks for arguments
-    if (dimension < 200) {
+    if (dimension < 200)
+    {
         printf("Too small dimension (%d), using 200\n", dimension);
         dimension = 200;
     }
-    if (skWidth < 60) {
+    if (skWidth < 60)
+    {
         printf("Too small soft key width (%d), using 60\n", skWidth);
         skWidth = 60;
     }
-    if (skHeight < 32) {
+    if (skHeight < 32)
+    {
         printf("Too small soft key height (%d), using 32\n", skHeight);
         skHeight = 32;
     }
-    if (colors != 2 && colors != 16 && colors != 256) {
+    if (colors != 2 && colors != 16 && colors != 256)
+    {
         printf("Invalid number of colors (%d), using 256\n", colors);
         colors = 256;
     }
 
     // print settings
     printf(
-           "***************************************************\n"
-           "* Parsing: %s to %s\n"
-           "* dimension: %i\n"
-           "* softkey size: %ix%i\n"
-           "* colors: %i\n",
-           argv[1], argv[2], dimension, skWidth, skHeight, colors);
+        "***************************************************\n"
+        "* Parsing: %s to %s\n"
+        "* dimension: %i\n"
+        "* softkey size: %ix%i\n"
+        "* colors: %i\n",
+        argv[1], argv[2], dimension, skWidth, skHeight, colors);
 
-    if (printTable) {
+    if (printTable)
+    {
         fprintf(fileOut, "unsigned char *pool = {\n  ");
         parse(fileIn, starts, ends, ascii_ready, dimension, skWidth, skHeight, colors);
         fprintf(fileOut, "\n};\n\n#define POOL_SIZE %d\n\n", pool_size);
         printList();
     }
-    else {
+    else
+    {
         parse(fileIn, starts, ends, binary_ready, dimension, skWidth, skHeight, colors);
     }
 

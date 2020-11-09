@@ -647,8 +647,8 @@ int getArchedBarGraphOptions(const char **attrs)
 
 int getPictureGraphicOptions(const char **attrs)
 {
-    static const char *names[] = {"transparent", "flashing"};  // No rle!
-    return getOptions(attrs, names, 2, "options");
+    static const char *names[] = {"transparent", "flashing", "rle"};  // No rle!
+    return getOptions(attrs, names, 3, "options");
 }
 
 int getFontStyle(const char **attrs)
