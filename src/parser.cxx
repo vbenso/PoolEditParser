@@ -27,7 +27,7 @@
 
 #include "xml.h"
 #include "parser.h"
-#include "../include/expat.h"
+#include <expat.h>
 #include "parserdef.h"
 
 // the maxium depth of xml-tree

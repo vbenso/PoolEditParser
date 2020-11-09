@@ -1,0 +1,12 @@
+*~
+*.o
+*.lo
+*.la
+.deps
+.libs
+
+/.vscode
+/build
+
+gmon.out
+*.iop
