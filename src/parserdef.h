@@ -149,7 +149,7 @@ typedef struct
     unsigned char  backgroundColor;
     unsigned char  borderColor;
     unsigned char  keyCode;
-    unsigned char  latchable;
+    unsigned char  options;
     unsigned char  objects;
     unsigned char  macros;
 } Button;

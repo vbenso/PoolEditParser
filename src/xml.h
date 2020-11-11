@@ -144,6 +144,7 @@ int getFontStyle(const char **attrs);
 int getFillType(const char **attrs);
 int getFontSize(const char **attrs);
 int getValidationType(const char **attrs);
+int getButtonOptions(const char **attrs);
 
 // get dimensions
 int getDimension(const char **attrs);
@@ -178,5 +179,6 @@ int getBlockFontWidth(const char **attrs, int fontMultiplier);
 int getBlockFontHeight(const char **attrs, int fontMultiplier);
 int getBlockCol(const char **attrs);
 int getBlockRow(const char **attrs);
+int getOptions(const char **attrs, const char **names, int bits, const char *name);
 
 #endif

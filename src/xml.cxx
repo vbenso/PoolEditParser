@@ -342,6 +342,12 @@ int isLatchable(const char **attrs) {
     return getBoolean(attrs, "latchable");
 }
 
+int getButtonOptions(const char **attrs)
+{
+    static const char *names[] = {"latchable", "latched", "supress_border", "transparent_background", "disabled" , "no_border"};
+    return getOptions(attrs, names, 6, "options");
+}
+
 int isEnabled(const char **attrs) {
     return getBoolean(attrs, "enabled");
 }

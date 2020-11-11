@@ -788,7 +788,7 @@ void *createObject(int type, const char **attr)
         button->backgroundColor = getBackgroundColor(attr, vtColors);
         button->borderColor = getBorderColor(attr, vtColors);
         button->keyCode = getKeyCode(attr);
-        button->latchable = isLatchable(attr);
+        button->options = getButtonOptions(attr);
         return button;
     }
     case 7: // InputBoolean
