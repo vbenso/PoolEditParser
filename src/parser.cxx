@@ -1069,7 +1069,7 @@ void *createObject(int type, const char **attr)
     case 27: // ObjectPointer
     {
         INIT_OBJECT(ObjectPointer, objectPointer);
-        objectPointer->value = 65535;
+        objectPointer->value = getValue(attr);
         return objectPointer;
     }
     case 28: // Macro
