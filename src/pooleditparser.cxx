@@ -44,6 +44,7 @@ node_t *list_end = NULL;
 
 // output file
 FILE *fileOut;
+FILE *fileOutHeader;
 
 int pool_size = 0;
 int nro_total_objects = 0;
@@ -222,10 +223,19 @@ int main(int argc, char *argv[])
         exit(-2);
     }
 
-    fileOut = fopen(argv[2], "w");
+    char buffer[1024];
+    sprintf(buffer, "%s.cpp", argv[2]);
+    fileOut = fopen(buffer, "w");
     if (fileOut == NULL)
     {
-        printf("Can't open file: %s\n", argv[2]);
+        printf("Can't open file: %s\n", buffer);
+        exit(-3);
+    }
+    sprintf(buffer, "%s.h", argv[2]);
+    fileOutHeader = fopen(buffer, "w");
+    if (fileOutHeader == NULL)
+    {
+        printf("Can't open file: %s\n", buffer);
         exit(-3);
     }
 
@@ -296,9 +306,20 @@ int main(int argc, char *argv[])
 
     if (printTable)
     {
-        fprintf(fileOut, "unsigned char *pool = {\n  ");
+        char header_guard[256];
+        sprintf(header_guard, "_%s_H", argv[2]);
+        fprintf(fileOutHeader, "#ifndef %s\n#define %s\n#include \"stdint.h\"\n", header_guard, header_guard);
+        fprintf(fileOutHeader, "extern unsigned char %s[];\n", argv[2]);
+        fprintf(fileOutHeader, "extern uint32_t %s_len;\n", argv[2]);
+        fprintf(fileOutHeader, "#endif");
+        fclose(fileOutHeader);
+
+        fprintf(fileOut, "#include \"%s.h\"\n\n", argv[2]);    
+        fprintf(fileOut, "unsigned char %s[] = {\n  ", argv[2]);
+
         parse(fileIn, starts, ends, ascii_ready, dimension, skWidth, skHeight, colors);
-        fprintf(fileOut, "\n};\n\n#define POOL_SIZE %d\n\n", pool_size);
+        fprintf(fileOut, "\n};\n\n");
+        fprintf(fileOut, "uint32_t %s_len = %d;\n", argv[2], pool_size);
         printList();
     }
     else
