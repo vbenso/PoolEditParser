@@ -85,12 +85,12 @@ void addToList(char *bff)
 //
 // function for printing the linked list
 //
-void printList()
+void printList(FILE* fout)
 {
     node_t *node = list_start;
     while (node != NULL)
     {
-        fprintf(fileOut, "%s", node->head);
+        fprintf(fout, "%s", node->head);
         node = node->tail;
     }
 }
@@ -311,8 +311,7 @@ int main(int argc, char *argv[])
         fprintf(fileOutHeader, "#ifndef %s\n#define %s\n#include \"stdint.h\"\n", header_guard, header_guard);
         fprintf(fileOutHeader, "extern unsigned char %s[];\n", argv[2]);
         fprintf(fileOutHeader, "extern uint32_t %s_len;\n", argv[2]);
-        fprintf(fileOutHeader, "#endif");
-        fclose(fileOutHeader);
+        
 
         fprintf(fileOut, "#include \"%s.h\"\n\n", argv[2]);    
         fprintf(fileOut, "unsigned char %s[] = {\n  ", argv[2]);
@@ -320,7 +319,9 @@ int main(int argc, char *argv[])
         parse(fileIn, starts, ends, ascii_ready, dimension, skWidth, skHeight, colors);
         fprintf(fileOut, "\n};\n\n");
         fprintf(fileOut, "uint32_t %s_len = %d;\n", argv[2], pool_size);
-        printList();
+        printList(fileOutHeader);
+        fprintf(fileOutHeader, "#endif");
+        fclose(fileOutHeader);
     }
     else
     {
