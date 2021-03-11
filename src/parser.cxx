@@ -262,7 +262,7 @@ void addObjectReference(void **object, ObjectReference objectReference, int role
     int error = 0;
     int objectType = getObjectType(*object);
 
-    if (role == ROLE_NONE)
+    if (role == ROLE_NONE && objectType != 27)
     {
         switch (objectType)
         {
@@ -485,7 +485,7 @@ void addObjectReference(void **object, ObjectReference objectReference, int role
         else
             error = 1;
     }
-    if (role == ROLE_OBJECT_POINTER_VALUE)
+    if (role == ROLE_OBJECT_POINTER_VALUE || objectType == 27)
     {
         if (objectType == 27)
             ((ObjectPointer *)*object)->value = objectReference.objectId;
@@ -1070,8 +1070,7 @@ void *createObject(int type, const char **attr)
     {
         INIT_OBJECT(ObjectPointer, objectPointer);
         objectPointer->value = getValue(attr);
-        if (objectPointer->value == 0)
-        {
+        if(objectPointer->value==0) {
             objectPointer->value = 65535; //without value, ObjectPointer should point to the NULL object, which is 65535
         }
         return objectPointer;
