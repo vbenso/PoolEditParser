@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<objectpool dimension="480" fix_bitmap_path="images\" sk_height="60" sk_width="60" std_bitmap_path="images\">
+  <workingset background_colour="grey" id="256" name="workingset" selectable="yes" use="designator">
+    <include_object id="259" name="datamask0" role="active_mask"/>
+    <outputstring background_colour="black" height="8" horizontal_justification="left" id="257" language="" length="7" name="label20" options="transparent" pos_x="0" pos_y="9" use="designator" value="MANTEGA" width="54">
+      <fontattributes font_colour="black" font_size="6x8" font_style="" font_type="latin1" id="258" language="" name="black6x8" role="font_attributes" use="designator"/>
+    </outputstring>
+  </workingset>
+  <datamask background_colour="grey" id="259" name="datamask0" role="" use="mask">
+    <include_object id="261" name="softkeymask" role="soft_key_mask"/>
+  </datamask>
+  <alarmmask acoustic_signal="medium" background_colour="yellow" id="260" name="alarmmask" priority="high" role="" use="mask">
+    <include_object id="261" name="softkeymask" role="soft_key_mask"/>
+  </alarmmask>
+  <softkeymask background_colour="grey" id="261" name="softkeymask" role="" use="designator">
+    <key background_colour="white" id="2251" key_code="1" name="irplantio1" use="designator">
+      <rectangle height="60" id="262" line_suppression="" name="rectangle7" pos_x="0" pos_y="0" use="designator" width="60">
+        <fillattributes fill_colour="white" fill_type="pattern" id="263" name="white" role="fill_attributes" use="designator">
+          <picturegraphic id="264" name="picture7" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+            <image_data image_height="8" image_width="8">ZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZg</image_data>
+          </picturegraphic>
+        </fillattributes>
+        <lineattributes id="265" line_art="1111111111111111" line_colour="silver" line_width="1" name="black1" role="line_attributes" use="designator"/>
+      </rectangle>
+      <container height="80" hidden="no" id="266" name="mao3" pos_x="-6" pos_y="4" use="designator" width="80">
+        <polygon height="50" id="267" name="polygon6" polygon_type="convex" pos_x="5" pos_y="4" use="designator" width="75">
+          <lineattributes id="268" line_art="1111111111111111" line_colour="black" line_width="2" name="black1" role="line_attributes" use="designator"/>
+          <point pos_x="14" pos_y="28"/>
+          <point pos_x="24" pos_y="28"/>
+          <point pos_x="27" pos_y="30"/>
+          <point pos_x="48" pos_y="30"/>
+          <point pos_x="49" pos_y="28"/>
+          <point pos_x="48" pos_y="25"/>
+          <point pos_x="40" pos_y="25"/>
+          <point pos_x="52" pos_y="25"/>
+          <point pos_x="53" pos_y="23"/>
+          <point pos_x="52" pos_y="20"/>
+          <point pos_x="42" pos_y="20"/>
+          <point pos_x="52" pos_y="20"/>
+          <point pos_x="54" pos_y="18"/>
+          <point pos_x="53" pos_y="15"/>
+          <point pos_x="42" pos_y="15"/>
+          <point pos_x="51" pos_y="15"/>
+          <point pos_x="52" pos_y="12"/>
+          <point pos_x="50" pos_y="10"/>
+          <point pos_x="37" pos_y="10"/>
+          <point pos_x="33" pos_y="15"/>
+          <point pos_x="27" pos_y="18"/>
+          <point pos_x="33" pos_y="15"/>
+          <point pos_x="35" pos_y="10"/>
+          <point pos_x="43" pos_y="10"/>
+          <point pos_x="43" pos_y="6"/>
+          <point pos_x="39" pos_y="4"/>
+          <point pos_x="27" pos_y="6"/>
+          <point pos_x="23" pos_y="10"/>
+          <point pos_x="14" pos_y="10"/>
+          <fillattributes fill_colour="black" fill_type="pattern" id="269" name="white11" role="fill_attributes" use="designator">
+            <picturegraphic id="270" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+              <image_data image_height="8" image_width="8">AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ</image_data>
+            </picturegraphic>
+          </fillattributes>
+        </polygon>
+        <container height="80" hidden="no" id="271" name="bolas" pos_x="0" pos_y="0" use="designator" width="80">
+          <ellipse ellipse_type="closed" end_angle="0" height="4" id="272" name="ellipse10" pos_x="30" pos_y="25" start_angle="0" use="designator" width="5">
+            <lineattributes id="273" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+            <fillattributes fill_colour="black" fill_type="pattern" id="274" name="white12" role="fill_attributes" use="designator">
+              <picturegraphic id="275" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+                <image_data image_height="8" image_width="8">5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5A</image_data>
+              </picturegraphic>
+            </fillattributes>
+          </ellipse>
+          <ellipse ellipse_type="closed" end_angle="0" height="4" id="276" name="ellipse11" pos_x="38" pos_y="26" start_angle="0" use="designator" width="4">
+            <lineattributes id="277" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+            <fillattributes fill_colour="black" fill_type="pattern" id="278" name="white13" role="fill_attributes" use="designator">
+              <picturegraphic id="279" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+                <image_data image_height="8" image_width="8">5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5A</image_data>
+              </picturegraphic>
+            </fillattributes>
+          </ellipse>
+          <ellipse ellipse_type="closed" end_angle="0" height="4" id="280" name="ellipse12" pos_x="38" pos_y="37" start_angle="0" use="designator" width="6">
+            <lineattributes id="281" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+            <fillattributes fill_colour="black" fill_type="pattern" id="282" name="white14" role="fill_attributes" use="designator">
+              <picturegraphic id="283" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+                <image_data image_height="8" image_width="8">5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5A</image_data>
+              </picturegraphic>
+            </fillattributes>
+          </ellipse>
+          <ellipse ellipse_type="closed" end_angle="0" height="5" id="284" name="ellipse13" pos_x="27" pos_y="44" start_angle="0" use="designator" width="7">
+            <lineattributes id="285" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+            <fillattributes fill_colour="black" fill_type="pattern" id="286" name="white16" role="fill_attributes" use="designator">
+              <picturegraphic id="287" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+                <image_data image_height="8" image_width="8">5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5A</image_data>
+              </picturegraphic>
+            </fillattributes>
+          </ellipse>
+          <ellipse ellipse_type="closed" end_angle="0" height="5" id="288" name="ellipse14" pos_x="41" pos_y="45" start_angle="0" use="designator" width="7">
+            <lineattributes id="289" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+            <fillattributes fill_colour="black" fill_type="pattern" id="290" name="white17" role="fill_attributes" use="designator">
+              <picturegraphic id="291" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+                <image_data image_height="8" image_width="8">5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5A</image_data>
+              </picturegraphic>
+            </fillattributes>
+          </ellipse>
+        </container>
+      </container>
+    </key>
+  </softkeymask>
+</objectpool>

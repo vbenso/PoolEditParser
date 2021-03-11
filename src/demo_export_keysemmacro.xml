@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<objectpool dimension="480" fix_bitmap_path="images\" sk_height="32" sk_width="60" std_bitmap_path="images\">
+  <workingset background_colour="white" id="256" name="workingset" selectable="yes" use="designator">
+    <include_object id="1" name="datamask0" role="active_mask"/>
+    <container height="80" hidden="no" id="257" name="tabsup0" pos_x="0" pos_y="0" use="designator" width="80">
+      <polygon height="32" id="258" name="polygon3" polygon_type="convex" pos_x="0" pos_y="0" use="designator" width="59">
+        <point pos_x="0" pos_y="32"/>
+        <point pos_x="47" pos_y="32"/>
+        <point pos_x="59" pos_y="0"/>
+        <point pos_x="14" pos_y="0"/>
+        <fillattributes fill_colour="white" fill_type="pattern" id="259" name="white1" role="fill_attributes" use="designator">
+          <picturegraphic id="260" name="picture0" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+            <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+          </picturegraphic>
+        </fillattributes>
+        <lineattributes id="261" line_art="1111111111111111" line_colour="white" line_width="1" name="black2" role="line_attributes" use="designator"/>
+      </polygon>
+      <container height="80" hidden="no" id="262" name="F" pos_x="0" pos_y="0" use="designator" width="80">
+        <polygon height="31" id="263" name="polygon4" polygon_type="convex" pos_x="9" pos_y="-1" use="designator" width="47">
+          <fillattributes fill_colour="black" fill_type="pattern" id="264" name="white3" role="fill_attributes" use="designator">
+            <picturegraphic id="265" name="picture2" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+              <image_data image_height="8" image_width="8">AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ</image_data>
+            </picturegraphic>
+          </fillattributes>
+          <lineattributes id="266" line_art="1111111111111111" line_colour="white" line_width="1" name="black1" role="line_attributes" use="designator"/>
+          <point pos_x="1" pos_y="30"/>
+          <point pos_x="11" pos_y="30"/>
+          <point pos_x="15" pos_y="22"/>
+          <point pos_x="22" pos_y="22"/>
+          <point pos_x="29" pos_y="15"/>
+          <point pos_x="20" pos_y="15"/>
+          <point pos_x="16" pos_y="18"/>
+          <point pos_x="19" pos_y="12"/>
+          <point pos_x="30" pos_y="12"/>
+          <point pos_x="31" pos_y="11"/>
+          <point pos_x="31" pos_y="13"/>
+          <point pos_x="40" pos_y="4"/>
+          <point pos_x="13" pos_y="4"/>
+        </polygon>
+      </container>
+    </container>
+    <include_object id="11" name="menu0" role=""/>
+  </workingset>
+  <softkeymask background_colour="white" id="267" name="softkeymask" role="" use="designator"/>
+  <datamask background_colour="white" id="1" name="datamask0" role="" use="mask">
+    <softkeymask background_colour="white" id="268" name="softkeymask" role="soft_key_mask" use="designator">
+      <key background_colour="white" id="269" key_code="1" name="softkey0" use="designator">
+        <container height="80" hidden="no" id="270" name="engrenagem0" pos_x="0" pos_y="0" use="designator" width="80">
+          <polygon height="36" id="271" name="polygon9" polygon_type="convex" pos_x="0" pos_y="0" use="designator" width="63">
+            <lineattributes id="272" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+            <point pos_x="17" pos_y="14"/>
+            <point pos_x="20" pos_y="16"/>
+            <point pos_x="20" pos_y="19"/>
+            <point pos_x="17" pos_y="20"/>
+            <point pos_x="19" pos_y="24"/>
+            <point pos_x="22" pos_y="22"/>
+            <point pos_x="24" pos_y="25"/>
+            <point pos_x="23" pos_y="28"/>
+            <point pos_x="28" pos_y="29"/>
+            <point pos_x="28" pos_y="26"/>
+            <point pos_x="32" pos_y="26"/>
+            <point pos_x="33" pos_y="29"/>
+            <point pos_x="36" pos_y="27"/>
+            <point pos_x="35" pos_y="24"/>
+            <point pos_x="38" pos_y="22"/>
+            <point pos_x="41" pos_y="23"/>
+            <point pos_x="42" pos_y="19"/>
+            <point pos_x="39" pos_y="18"/>
+            <point pos_x="39" pos_y="15"/>
+            <point pos_x="42" pos_y="14"/>
+            <point pos_x="41" pos_y="10"/>
+            <point pos_x="38" pos_y="11"/>
+            <point pos_x="35" pos_y="9"/>
+            <point pos_x="36" pos_y="6"/>
+            <point pos_x="33" pos_y="4"/>
+            <point pos_x="31" pos_y="7"/>
+            <point pos_x="27" pos_y="7"/>
+            <point pos_x="26" pos_y="4"/>
+            <point pos_x="22" pos_y="6"/>
+            <point pos_x="24" pos_y="9"/>
+            <point pos_x="22" pos_y="12"/>
+            <point pos_x="19" pos_y="10"/>
+          </polygon>
+          <picturegraphic id="273" name="picture4" options="transparent" pos_x="10" pos_y="0" transparency_colour="yellow" use="designator" width="37">
+            <image_data image_height="100" image_width="100">AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQFmAAAAAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBCAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZjsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQE7AAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBATsAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAGYBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAgBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQE7AAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAHAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEIAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBATsAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBATsAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAACAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAcBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBZgAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAHAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAGYBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQE7AAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAOwEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO2ZmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAABAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBATsAAAABAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ</image_data>
+          </picturegraphic>
+        </container>
+      </key>
+    </softkeymask>
+    <container height="106" hidden="no" id="274" name="navbarson" pos_x="0" pos_y="0" use="mask" width="480">
+      <polygon height="62" id="275" name="polygon0" polygon_type="convex" pos_x="0" pos_y="0" use="mask" width="102">
+        <fillattributes fill_colour="black" fill_type="pattern" id="276" name="white" role="fill_attributes" use="mask">
+          <include_object id="464" name="picture1" pos_x="0" pos_y="0" role="fill_pattern"/>
+        </fillattributes>
+        <lineattributes id="277" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+        <point pos_x="00" pos_y="58"/>
+        <point pos_x="100" pos_y="58"/>
+        <point pos_x="78" pos_y="0"/>
+        <point pos_x="0" pos_y="0"/>
+      </polygon>
+      <polygon height="62" id="278" name="polygon2" polygon_type="convex" pos_x="378" pos_y="0" use="mask" width="102">
+        <fillattributes fill_colour="black" fill_type="pattern" id="279" name="white" role="fill_attributes" use="mask">
+          <include_object id="464" name="picture1" pos_x="0" pos_y="0" role="fill_pattern"/>
+        </fillattributes>
+        <lineattributes id="280" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+        <point pos_x="0" pos_y="58"/>
+        <point pos_x="100" pos_y="58"/>
+        <point pos_x="100" pos_y="0"/>
+        <point pos_x="22" pos_y="0"/>
+      </polygon>
+      <polygon height="62" id="281" name="polygon1" polygon_type="convex" pos_x="99" pos_y="0" use="mask" width="282">
+        <fillattributes fill_colour="black" fill_type="pattern" id="282" name="white" role="fill_attributes" use="mask">
+          <include_object id="464" name="picture1" pos_x="0" pos_y="0" role="fill_pattern"/>
+        </fillattributes>
+        <lineattributes id="283" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+        <point pos_x="22" pos_y="58"/>
+        <point pos_x="258" pos_y="58"/>
+        <point pos_x="280" pos_y="0"/>
+        <point pos_x="0" pos_y="0"/>
+      </polygon>
+      <container height="80" hidden="no" id="284" name="mao" pos_x="0" pos_y="0" use="mask" width="80">
+        <polygon height="50" id="285" name="polygon6" polygon_type="convex" pos_x="5" pos_y="4" use="mask" width="75">
+          <lineattributes id="286" line_art="1111111111111111" line_colour="black" line_width="2" name="black1" role="line_attributes" use="mask"/>
+          <point pos_x="14" pos_y="28"/>
+          <point pos_x="24" pos_y="28"/>
+          <point pos_x="27" pos_y="30"/>
+          <point pos_x="48" pos_y="30"/>
+          <point pos_x="49" pos_y="28"/>
+          <point pos_x="48" pos_y="25"/>
+          <point pos_x="40" pos_y="25"/>
+          <point pos_x="52" pos_y="25"/>
+          <point pos_x="53" pos_y="23"/>
+          <point pos_x="52" pos_y="20"/>
+          <point pos_x="42" pos_y="20"/>
+          <point pos_x="52" pos_y="20"/>
+          <point pos_x="54" pos_y="18"/>
+          <point pos_x="53" pos_y="15"/>
+          <point pos_x="42" pos_y="15"/>
+          <point pos_x="51" pos_y="15"/>
+          <point pos_x="52" pos_y="12"/>
+          <point pos_x="50" pos_y="10"/>
+          <point pos_x="37" pos_y="10"/>
+          <point pos_x="33" pos_y="15"/>
+          <point pos_x="27" pos_y="18"/>
+          <point pos_x="33" pos_y="15"/>
+          <point pos_x="35" pos_y="10"/>
+          <point pos_x="43" pos_y="10"/>
+          <point pos_x="43" pos_y="6"/>
+          <point pos_x="39" pos_y="4"/>
+          <point pos_x="27" pos_y="6"/>
+          <point pos_x="23" pos_y="10"/>
+          <point pos_x="14" pos_y="10"/>
+        </polygon>
+        <container height="80" hidden="no" id="287" name="bolas" pos_x="0" pos_y="0" use="mask" width="80">
+          <ellipse ellipse_type="closed" end_angle="0" height="4" id="288" name="ellipse10" pos_x="30" pos_y="25" start_angle="0" use="mask" width="5">
+            <lineattributes id="289" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          </ellipse>
+          <ellipse ellipse_type="closed" end_angle="0" height="4" id="290" name="ellipse11" pos_x="38" pos_y="26" start_angle="0" use="mask" width="4">
+            <lineattributes id="291" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          </ellipse>
+          <ellipse ellipse_type="closed" end_angle="0" height="4" id="292" name="ellipse12" pos_x="38" pos_y="37" start_angle="0" use="mask" width="6">
+            <lineattributes id="293" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          </ellipse>
+          <ellipse ellipse_type="closed" end_angle="0" height="5" id="294" name="ellipse13" pos_x="27" pos_y="44" start_angle="0" use="mask" width="7">
+            <lineattributes id="295" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          </ellipse>
+          <ellipse ellipse_type="closed" end_angle="0" height="5" id="296" name="ellipse14" pos_x="41" pos_y="45" start_angle="0" use="mask" width="7">
+            <lineattributes id="297" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          </ellipse>
+        </container>
+      </container>
+    </container>
+    <outputstring background_colour="white" height="79" horizontal_justification="left" id="298" language="" length="7" name="label0" options="transparent" pos_x="155" pos_y="13" use="mask" value="PLANTIO" width="230">
+      <fontattributes font_colour="white" font_size="24x32" font_style="normal" font_type="latin1" id="299" language="" name="black6x8" role="font_attributes" use="mask"/>
+    </outputstring>
+    <container height="182" hidden="no" id="300" name="OPCOES" pos_x="0" pos_y="185" use="mask" width="480">
+      <container height="80" hidden="no" id="301" name="PLANTANDO" pos_x="0" pos_y="-12" use="mask" width="480">
+        <polygon height="53" id="302" name="polygon20" polygon_type="convex" pos_x="245" pos_y="14" use="mask" width="210">
+          <lineattributes id="303" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          <point pos_x="190" pos_y="50"/>
+          <point pos_x="210" pos_y="0"/>
+          <point pos_x="20" pos_y="0"/>
+          <point pos_x="0" pos_y="50"/>
+        </polygon>
+        <polygon height="53" id="304" name="polygon21" polygon_type="convex" pos_x="25" pos_y="15" use="mask" width="210">
+          <lineattributes id="305" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          <point pos_x="190" pos_y="50"/>
+          <point pos_x="210" pos_y="0"/>
+          <point pos_x="20" pos_y="0"/>
+          <point pos_x="0" pos_y="50"/>
+          <fillattributes fill_colour="black" fill_type="pattern" id="306" name="white0" role="fill_attributes" use="mask">
+            <include_object id="464" name="picture1" pos_x="0" pos_y="0" role="fill_pattern"/>
+          </fillattributes>
+        </polygon>
+        <outputstring background_colour="black" height="21" horizontal_justification="middle" id="307" language="" length="9" name="label30" options="transparent" pos_x="25" pos_y="32" use="mask" value="Plantando" width="210">
+          <fontattributes font_colour="white" font_size="12x16" font_style="bold" font_type="latin1" id="308" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <outputstring background_colour="white" height="21" horizontal_justification="left" id="309" language="" length="5" name="label33" options="transparent" pos_x="157" pos_y="49" use="mask" value="km/h" width="65">
+          <fontattributes font_colour="white" font_size="8x12" font_style="bold" font_type="latin1" id="310" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <outputstring background_colour="black" height="21" horizontal_justification="middle" id="311" language="" length="5" name="label34" options="transparent" pos_x="245" pos_y="26" use="mask" value="20.0" width="210">
+          <fontattributes font_colour="black" font_size="16x24" font_style="bold" font_type="latin1" id="312" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <linearbargraph colour="green" height="8" id="313" max_value="1000" min_value="0" name="linearbargraph3" number_of_ticks="0" options="border+targetline+ticks+horizontal+growpositive" pos_x="270" pos_y="54" target_line_colour="red" target_value="667" use="mask" value="333" width="152">
+          <numbervariable id="314" name="numvar0" role="variable_reference" use="mask" value="200"/>
+          <numbervariable id="315" name="numvar1" role="target_value_variable_reference" use="mask" value="800"/>
+        </linearbargraph>
+      </container>
+      <container height="80" hidden="yes" id="316" name="parado" pos_x="0" pos_y="-12" use="mask" width="480">
+        <polygon height="53" id="317" name="polygon20" polygon_type="convex" pos_x="245" pos_y="14" use="mask" width="210">
+          <lineattributes id="318" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          <point pos_x="190" pos_y="50"/>
+          <point pos_x="210" pos_y="0"/>
+          <point pos_x="20" pos_y="0"/>
+          <point pos_x="0" pos_y="50"/>
+        </polygon>
+        <polygon height="53" id="319" name="polygon21" polygon_type="convex" pos_x="25" pos_y="15" use="mask" width="210">
+          <lineattributes id="320" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          <point pos_x="190" pos_y="50"/>
+          <point pos_x="210" pos_y="0"/>
+          <point pos_x="20" pos_y="0"/>
+          <point pos_x="0" pos_y="50"/>
+          <fillattributes fill_colour="black" fill_type="pattern" id="321" name="white0" role="fill_attributes" use="mask">
+            <picturegraphic id="322" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="mask" width="64">
+              <image_data image_height="8" image_width="8">y8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLyw</image_data>
+            </picturegraphic>
+          </fillattributes>
+        </polygon>
+        <outputstring background_colour="black" height="21" horizontal_justification="middle" id="323" language="" length="6" name="label30" options="transparent" pos_x="25" pos_y="32" use="mask" value="Parado" width="210">
+          <fontattributes font_colour="white" font_size="12x16" font_style="bold" font_type="latin1" id="324" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <outputstring background_colour="white" height="21" horizontal_justification="left" id="325" language="" length="5" name="label33" options="transparent" pos_x="157" pos_y="49" use="mask" value="km/h" width="65">
+          <fontattributes font_colour="white" font_size="8x12" font_style="bold" font_type="latin1" id="326" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <outputstring background_colour="black" height="21" horizontal_justification="middle" id="327" language="" length="5" name="label34" options="transparent" pos_x="245" pos_y="26" use="mask" value="20.0" width="210">
+          <fontattributes font_colour="black" font_size="16x24" font_style="bold" font_type="latin1" id="328" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <linearbargraph colour="green" height="8" id="329" max_value="1000" min_value="0" name="linearbargraph3" number_of_ticks="0" options="border+targetline+ticks+horizontal+growpositive" pos_x="270" pos_y="54" target_line_colour="red" target_value="667" use="mask" value="333" width="152">
+          <numbervariable id="330" name="numvar0" role="variable_reference" use="mask" value="200"/>
+          <numbervariable id="331" name="numvar1" role="target_value_variable_reference" use="mask" value="800"/>
+        </linearbargraph>
+      </container>
+      <container height="80" hidden="no" id="332" name="POPULACAO" pos_x="0" pos_y="50" use="mask" width="480">
+        <polygon height="53" id="333" name="polygon20" polygon_type="convex" pos_x="245" pos_y="14" use="mask" width="210">
+          <lineattributes id="334" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          <point pos_x="190" pos_y="50"/>
+          <point pos_x="210" pos_y="0"/>
+          <point pos_x="20" pos_y="0"/>
+          <point pos_x="0" pos_y="50"/>
+        </polygon>
+        <polygon height="53" id="335" name="polygon21" polygon_type="convex" pos_x="25" pos_y="15" use="mask" width="210">
+          <lineattributes id="336" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          <point pos_x="190" pos_y="50"/>
+          <point pos_x="210" pos_y="0"/>
+          <point pos_x="20" pos_y="0"/>
+          <point pos_x="0" pos_y="50"/>
+          <fillattributes fill_colour="black" fill_type="pattern" id="337" name="white0" role="fill_attributes" use="mask">
+            <include_object id="464" name="picture1" pos_x="0" pos_y="0" role="fill_pattern"/>
+          </fillattributes>
+        </polygon>
+        <outputstring background_colour="black" height="21" horizontal_justification="middle" id="338" language="" length="9" name="label22" options="transparent" pos_x="25" pos_y="30" use="mask" value="População" width="210">
+          <fontattributes font_colour="white" font_size="12x16" font_style="bold" font_type="latin1" id="339" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <outputstring background_colour="white" height="21" horizontal_justification="left" id="340" language="" length="5" name="label23" options="transparent" pos_x="156" pos_y="48" use="mask" value="pl/ha" width="79">
+          <fontattributes font_colour="white" font_size="8x12" font_style="bold" font_type="latin1" id="341" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <outputstring background_colour="black" height="21" horizontal_justification="middle" id="342" language="" length="6" name="label28" options="transparent" pos_x="245" pos_y="26" use="mask" value="000000" width="210">
+          <fontattributes font_colour="black" font_size="16x24" font_style="bold" font_type="latin1" id="343" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <linearbargraph colour="green" height="8" id="344" max_value="1000" min_value="0" name="linearbargraph4" number_of_ticks="0" options="border+targetline+ticks+horizontal+growpositive" pos_x="270" pos_y="54" target_line_colour="red" target_value="667" use="mask" value="333" width="152">
+          <numbervariable id="345" name="numvar0" role="variable_reference" use="mask" value="200"/>
+          <numbervariable id="346" name="numvar1" role="target_value_variable_reference" use="mask" value="800"/>
+        </linearbargraph>
+      </container>
+      <container height="80" hidden="no" id="347" name="HECTARIMETRO" pos_x="0" pos_y="113" use="mask" width="480">
+        <polygon height="53" id="348" name="polygon20" polygon_type="convex" pos_x="245" pos_y="14" use="mask" width="210">
+          <lineattributes id="349" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          <point pos_x="190" pos_y="50"/>
+          <point pos_x="210" pos_y="0"/>
+          <point pos_x="20" pos_y="0"/>
+          <point pos_x="0" pos_y="50"/>
+        </polygon>
+        <polygon height="53" id="350" name="polygon21" polygon_type="convex" pos_x="25" pos_y="15" use="mask" width="210">
+          <lineattributes id="351" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          <point pos_x="190" pos_y="50"/>
+          <point pos_x="210" pos_y="0"/>
+          <point pos_x="20" pos_y="0"/>
+          <point pos_x="0" pos_y="50"/>
+          <fillattributes fill_colour="black" fill_type="pattern" id="352" name="white0" role="fill_attributes" use="mask">
+            <include_object id="464" name="picture1" pos_x="0" pos_y="0" role="fill_pattern"/>
+          </fillattributes>
+        </polygon>
+        <outputstring background_colour="black" height="21" horizontal_justification="middle" id="353" language="" length="12" name="label29" options="transparent" pos_x="25" pos_y="30" use="mask" value="Hectarímetro" width="210">
+          <fontattributes font_colour="white" font_size="12x16" font_style="bold" font_type="latin1" id="354" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <outputstring background_colour="black" height="21" horizontal_justification="middle" id="355" language="" length="7" name="label25" options="transparent" pos_x="245" pos_y="26" use="mask" value="0000.00" width="210">
+          <fontattributes font_colour="black" font_size="16x24" font_style="bold" font_type="latin1" id="356" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <outputstring background_colour="black" height="21" horizontal_justification="left" id="357" language="" length="5" name="label31" options="transparent" pos_x="156" pos_y="49" use="mask" value="ha" width="31">
+          <fontattributes font_colour="white" font_size="8x12" font_style="bold" font_type="latin1" id="358" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <linearbargraph colour="green" height="8" id="359" max_value="1000" min_value="0" name="linearbargraph5" number_of_ticks="0" options="border+targetline+ticks+horizontal+growpositive" pos_x="270" pos_y="54" target_line_colour="red" target_value="667" use="mask" value="333" width="152">
+          <numbervariable id="360" name="numvar0" role="variable_reference" use="mask" value="200"/>
+          <numbervariable id="361" name="numvar1" role="target_value_variable_reference" use="mask" value="800"/>
+        </linearbargraph>
+      </container>
+    </container>
+    <container height="114" hidden="no" id="362" name="dataehora0" pos_x="302" pos_y="-13" use="mask" width="205">
+      <outputstring background_colour="black" height="21" horizontal_justification="left" id="363" language="" length="5" name="label16" options="transparent" pos_x="89" pos_y="41" use="mask" value="15:20" width="89">
+        <fontattributes font_colour="white" font_size="16x24" font_style="bold" font_type="latin1" id="364" language="" name="black6x8" role="font_attributes" use="mask"/>
+      </outputstring>
+      <outputstring background_colour="black" height="13" horizontal_justification="left" id="365" language="" length="10" name="label13" options="transparent" pos_x="95" pos_y="24" use="mask" value="26/04/2021" width="87">
+        <include_object id="465" name="black6x8" role="font_attributes"/>
+      </outputstring>
+    </container>
+    <container height="107" hidden="no" id="366" name="sem/m0" pos_x="140" pos_y="70" use="mask" width="200">
+      <outputstring background_colour="black" height="26" horizontal_justification="left" id="367" language="" length="5" name="label11" options="transparent" pos_x="110" pos_y="83" use="mask" value="sem/m" width="84">
+        <fontattributes font_colour="black" font_size="16x24" font_style="normal" font_type="latin1" id="368" language="" name="black6x9" role="font_attributes" use="mask"/>
+      </outputstring>
+      <archedbargraph bar_graph_width="8" block_col="0" block_font_size="12x16" block_row="0" colour="red" end_angle="90" height="159" id="9001" max_value="1000" min_value="0" name="archedbargraph3" options="border+targetline+clockwise" pos_x="0" pos_y="0" start_angle="0" target_line_colour="red" target_value="999" use="mask" value="999" width="198">
+        <numbervariable id="9002" name="numvar2" role="variable_reference" use="mask" value="888"/>
+        <numbervariable id="9003" name="numvar3" role="target_value_variable_reference" use="mask" value="800"/>
+      </archedbargraph>
+      <outputstring background_colour="white" height="46" horizontal_justification="middle" id="9004" language="" length="4" name="label3" options="transparent" pos_x="0" pos_y="43" use="mask" value="99.0" width="200">
+        <fontattributes font_colour="black" font_size="32x48" font_style="bold" font_type="latin1" id="369" language="" name="black6x9" role="font_attributes" use="mask"/>
+      </outputstring>
+    </container>
+    <container height="80" hidden="no" id="4000" name="barras" pos_x="0" pos_y="388" use="mask" width="480">
+      <container height="80" hidden="no" id="3000" name="container0" pos_x="0" pos_y="0" use="mask" width="80"/>
+    </container>
+  </datamask>
+  <datamask background_colour="white" id="11" name="menu0" role="" use="mask">
+    <rectangle height="222" id="370" line_suppression="" name="rectangle5" pos_x="0" pos_y="129" use="mask" width="480">
+      <fillattributes fill_colour="white" fill_type="pattern" id="371" name="white" role="" use="mask">
+        <picturegraphic id="372" name="picture9" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="mask" width="64">
+          <image_data image_height="8" image_width="8">AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ</image_data>
+        </picturegraphic>
+      </fillattributes>
+      <lineattributes id="373" line_art="1111111111111111" line_colour="white" line_width="1" name="black1" role="line_attributes" use="mask"/>
+    </rectangle>
+    <softkeymask background_colour="white" id="374" name="softkeymask" role="soft_key_mask" use="designator">
+      <key background_colour="white" id="375" key_code="1" name="irplantio" use="designator">
+        <container height="32" hidden="false" id="376" name="container" pos_x="3" pos_y="0" use="designator" width="56">
+          <polygon height="30" id="377" name="polygon5" polygon_type="convex" pos_x="3" pos_y="0" use="designator" width="45">
+            <lineattributes id="378" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+            <point pos_x="9" pos_y="16"/>
+            <point pos_x="17" pos_y="16"/>
+            <point pos_x="18" pos_y="18"/>
+            <point pos_x="34" pos_y="18"/>
+            <point pos_x="34" pos_y="16"/>
+            <point pos_x="25" pos_y="16"/>
+            <point pos_x="36" pos_y="16"/>
+            <point pos_x="36" pos_y="13"/>
+            <point pos_x="27" pos_y="13"/>
+            <point pos_x="37" pos_y="13"/>
+            <point pos_x="37" pos_y="10"/>
+            <point pos_x="27" pos_y="10"/>
+            <point pos_x="36" pos_y="10"/>
+            <point pos_x="36" pos_y="7"/>
+            <point pos_x="25" pos_y="7"/>
+            <point pos_x="24" pos_y="7"/>
+            <point pos_x="23" pos_y="7"/>
+            <point pos_x="26" pos_y="7"/>
+            <point pos_x="29" pos_y="7"/>
+            <point pos_x="29" pos_y="4"/>
+            <point pos_x="22" pos_y="4"/>
+            <point pos_x="21" pos_y="4"/>
+            <point pos_x="20" pos_y="4"/>
+            <point pos_x="17" pos_y="7"/>
+            <point pos_x="9" pos_y="7"/>
+          </polygon>
+          <ellipse ellipse_type="closed" end_angle="0" height="4" id="379" name="ellipse0" pos_x="25" pos_y="24" start_angle="0" use="designator" width="4">
+            <lineattributes id="380" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+            <fillattributes fill_colour="black" fill_type="pattern" id="381" name="white8" role="fill_attributes" use="designator">
+              <picturegraphic id="382" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+                <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+              </picturegraphic>
+            </fillattributes>
+          </ellipse>
+          <ellipse ellipse_type="closed" end_angle="0" height="3" id="383" name="ellipse3" pos_x="25" pos_y="18" start_angle="0" use="designator" width="3">
+            <lineattributes id="384" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+            <fillattributes fill_colour="black" fill_type="pattern" id="385" name="white4" role="fill_attributes" use="designator">
+              <picturegraphic id="386" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+                <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+              </picturegraphic>
+            </fillattributes>
+          </ellipse>
+          <ellipse ellipse_type="closed" end_angle="0" height="3" id="387" name="ellipse4" pos_x="21" pos_y="20" start_angle="0" use="designator" width="3">
+            <lineattributes id="388" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+            <fillattributes fill_colour="black" fill_type="pattern" id="389" name="white5" role="fill_attributes" use="designator">
+              <picturegraphic id="390" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+                <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+              </picturegraphic>
+            </fillattributes>
+          </ellipse>
+          <ellipse ellipse_type="closed" end_angle="0" height="3" id="391" name="ellipse2" pos_x="26" pos_y="14" start_angle="0" use="designator" width="3">
+            <lineattributes id="392" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+            <fillattributes fill_colour="black" fill_type="pattern" id="393" name="white6" role="fill_attributes" use="designator">
+              <picturegraphic id="394" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+                <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+              </picturegraphic>
+            </fillattributes>
+          </ellipse>
+          <ellipse ellipse_type="closed" end_angle="0" height="3" id="395" name="ellipse1" pos_x="23" pos_y="12" start_angle="0" use="designator" width="3">
+            <lineattributes id="396" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+            <fillattributes fill_colour="black" fill_type="pattern" id="397" name="white7" role="fill_attributes" use="designator">
+              <picturegraphic id="398" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+                <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+              </picturegraphic>
+            </fillattributes>
+          </ellipse>
+          <polygon height="20" id="399" name="polygon7" polygon_type="convex" pos_x="26" pos_y="11" use="designator" width="20">
+            <lineattributes id="400" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+            <point pos_x="1" pos_y="19"/>
+            <point pos_x="17" pos_y="19"/>
+            <point pos_x="5" pos_y="15"/>
+            <fillattributes fill_colour="black" fill_type="pattern" id="401" name="white9" role="fill_attributes" use="designator">
+              <picturegraphic id="402" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+                <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+              </picturegraphic>
+            </fillattributes>
+          </polygon>
+          <polygon height="20" id="403" name="polygon10" polygon_type="convex" pos_x="11" pos_y="11" use="designator" width="20">
+            <lineattributes id="404" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+            <point pos_x="1" pos_y="19"/>
+            <point pos_x="17" pos_y="19"/>
+            <point pos_x="5" pos_y="15"/>
+            <fillattributes fill_colour="black" fill_type="pattern" id="405" name="white10" role="fill_attributes" use="designator">
+              <picturegraphic id="406" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+                <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+              </picturegraphic>
+            </fillattributes>
+          </polygon>
+          <rectangle height="11" id="407" line_suppression="" name="rectangle0" pos_x="0" pos_y="6" use="designator" width="16">
+            <lineattributes id="408" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+          </rectangle>
+        </container>
+        <ellipse ellipse_type="closed" end_angle="0" height="7" id="409" name="ellipse5" pos_x="14" pos_y="8" start_angle="0" use="designator" width="7">
+          <lineattributes id="410" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="designator"/>
+          <fillattributes fill_colour="black" fill_type="pattern" id="411" name="white2" role="fill_attributes" use="designator">
+            <picturegraphic id="412" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+              <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+            </picturegraphic>
+          </fillattributes>
+        </ellipse>
+      </key>
+    </softkeymask>
+    <container height="106" hidden="no" id="413" name="navbarson" pos_x="0" pos_y="0" use="mask" width="480">
+      <polygon height="62" id="414" name="polygon0" polygon_type="convex" pos_x="0" pos_y="0" use="mask" width="102">
+        <fillattributes fill_colour="black" fill_type="pattern" id="415" name="white" role="fill_attributes" use="mask">
+          <picturegraphic id="416" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="mask" width="64">
+            <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+          </picturegraphic>
+        </fillattributes>
+        <lineattributes id="417" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+        <point pos_x="00" pos_y="58"/>
+        <point pos_x="100" pos_y="58"/>
+        <point pos_x="78" pos_y="0"/>
+        <point pos_x="0" pos_y="0"/>
+      </polygon>
+      <polygon height="62" id="418" name="polygon2" polygon_type="convex" pos_x="378" pos_y="0" use="mask" width="102">
+        <fillattributes fill_colour="black" fill_type="pattern" id="419" name="white" role="fill_attributes" use="mask">
+          <picturegraphic id="420" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="mask" width="64">
+            <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+          </picturegraphic>
+        </fillattributes>
+        <lineattributes id="421" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+        <point pos_x="0" pos_y="58"/>
+        <point pos_x="100" pos_y="58"/>
+        <point pos_x="100" pos_y="0"/>
+        <point pos_x="22" pos_y="0"/>
+      </polygon>
+      <polygon height="62" id="422" name="polygon1" polygon_type="convex" pos_x="99" pos_y="0" use="mask" width="282">
+        <fillattributes fill_colour="black" fill_type="pattern" id="423" name="white" role="fill_attributes" use="mask">
+          <picturegraphic id="424" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="mask" width="64">
+            <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+          </picturegraphic>
+        </fillattributes>
+        <lineattributes id="425" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+        <point pos_x="22" pos_y="58"/>
+        <point pos_x="258" pos_y="58"/>
+        <point pos_x="280" pos_y="0"/>
+        <point pos_x="0" pos_y="0"/>
+      </polygon>
+      <container height="80" hidden="no" id="426" name="engrenagem" pos_x="0" pos_y="0" use="mask" width="80">
+        <polygon height="44" id="427" name="polygon8" polygon_type="convex" pos_x="17" pos_y="7" use="mask" width="48">
+          <lineattributes id="428" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          <point pos_x="9" pos_y="12"/>
+          <point pos_x="5" pos_y="11"/>
+          <point pos_x="3" pos_y="17"/>
+          <point pos_x="7" pos_y="18"/>
+          <point pos_x="7" pos_y="23"/>
+          <point pos_x="3" pos_y="25"/>
+          <point pos_x="5" pos_y="31"/>
+          <point pos_x="10" pos_y="30"/>
+          <point pos_x="13" pos_y="32"/>
+          <point pos_x="12" pos_y="37"/>
+          <point pos_x="18" pos_y="39"/>
+          <point pos_x="19" pos_y="35"/>
+          <point pos_x="24" pos_y="35"/>
+          <point pos_x="27" pos_y="39"/>
+          <point pos_x="32" pos_y="35"/>
+          <point pos_x="30" pos_y="32"/>
+          <point pos_x="33" pos_y="29"/>
+          <point pos_x="38" pos_y="29"/>
+          <point pos_x="39" pos_y="24"/>
+          <point pos_x="35" pos_y="22"/>
+          <point pos_x="36" pos_y="17"/>
+          <point pos_x="39" pos_y="16"/>
+          <point pos_x="37" pos_y="10"/>
+          <point pos_x="32" pos_y="11"/>
+          <point pos_x="29" pos_y="9"/>
+          <point pos_x="30" pos_y="4"/>
+          <point pos_x="25" pos_y="2"/>
+          <point pos_x="23" pos_y="6"/>
+          <point pos_x="18" pos_y="6"/>
+          <point pos_x="16" pos_y="2"/>
+          <point pos_x="11" pos_y="4"/>
+          <point pos_x="12" pos_y="9"/>
+          <fillattributes fill_colour="black" fill_type="pattern" id="429" name="white15" role="fill_attributes" use="mask">
+            <include_object id="464" name="picture1" pos_x="0" pos_y="0" role="fill_pattern"/>
+          </fillattributes>
+        </polygon>
+        <ellipse ellipse_type="closed" end_angle="0" height="12" id="430" name="ellipse6" pos_x="32" pos_y="22" start_angle="0" use="mask" width="12">
+          <fillattributes fill_colour="white" fill_type="pattern" id="431" name="white" role="" use="mask">
+            <picturegraphic id="432" name="picture3" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="mask" width="64">
+              <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+            </picturegraphic>
+          </fillattributes>
+          <lineattributes id="433" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+        </ellipse>
+      </container>
+    </container>
+    <outputstring background_colour="white" height="39" horizontal_justification="middle" id="434" language="" length="4" name="label0" options="transparent" pos_x="100" pos_y="13" use="mask" value="MENU" width="282">
+      <fontattributes font_colour="white" font_size="24x32" font_style="normal" font_type="latin1" id="435" language="" name="black6x8" role="font_attributes" use="mask"/>
+    </outputstring>
+    <container height="114" hidden="no" id="436" name="dataehora0" pos_x="302" pos_y="-13" use="mask" width="205">
+      <outputstring background_colour="black" height="21" horizontal_justification="left" id="437" language="" length="5" name="label16" options="transparent" pos_x="89" pos_y="41" use="mask" value="15:20" width="89">
+        <fontattributes font_colour="white" font_size="16x24" font_style="bold" font_type="latin1" id="438" language="" name="black6x8" role="font_attributes" use="mask"/>
+      </outputstring>
+      <outputstring background_colour="black" height="13" horizontal_justification="left" id="439" language="" length="10" name="label13" options="transparent" pos_x="95" pos_y="24" use="mask" value="26/04/2021" width="87">
+        <fontattributes font_colour="white" font_size="8x12" font_style="bold" font_type="latin1" id="440" language="" name="black6x8" role="font_attributes" use="mask"/>
+      </outputstring>
+    </container>
+    <container height="222" hidden="no" id="441" name="options" pos_x="0" pos_y="129" use="mask" width="480">
+      <container height="76" hidden="no" id="442" name="opt1" pos_x="0" pos_y="-6" use="mask" width="480">
+        <button background_colour="silver" border_colour="white" button_options="no_border" height="62" id="443" key_code="1" name="button0" options="supress_border+no_border" pos_x="130" pos_y="7" use="mask" width="220">
+          <rectangle height="62" id="444" line_suppression="" name="rectangle4" pos_x="0" pos_y="0" use="mask" width="220">
+            <fillattributes fill_colour="white" fill_type="pattern" id="445" name="white" role="" use="mask">
+              <picturegraphic id="446" name="picture8" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="mask" width="64">
+                <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+              </picturegraphic>
+            </fillattributes>
+            <lineattributes id="447" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          </rectangle>
+          <outputstring background_colour="white" height="31" horizontal_justification="middle" id="448" language="" length="10" name="label12" options="transparent" pos_x="3" pos_y="18" use="mask" value="Instalação" width="210">
+            <fontattributes font_colour="white" font_size="12x16" font_style="" font_type="latin1" id="449" language="" name="black6x8" role="font_attributes" use="mask"/>
+          </outputstring>
+        </button>
+      </container>
+      <container height="76" hidden="no" id="450" name="opt5" pos_x="0" pos_y="74" use="mask" width="480">
+        <button background_colour="silver" border_colour="white" button_options="no_border" height="62" id="451" key_code="1" name="button0" options="supress_border+no_border" pos_x="130" pos_y="7" use="mask" width="220">
+          <rectangle height="62" id="452" line_suppression="" name="rectangle4" pos_x="0" pos_y="0" use="mask" width="220">
+            <fillattributes fill_colour="white" fill_type="pattern" id="453" name="white" role="" use="mask">
+              <picturegraphic id="454" name="picture8" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="mask" width="64">
+                <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+              </picturegraphic>
+            </fillattributes>
+            <lineattributes id="455" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          </rectangle>
+          <outputstring background_colour="white" height="31" horizontal_justification="middle" id="456" language="" length="11" name="label10" options="transparent" pos_x="3" pos_y="18" use="mask" value="Bloq Painel" width="210">
+            <include_object id="465" name="black6x8" role="font_attributes"/>
+          </outputstring>
+        </button>
+      </container>
+      <container height="76" hidden="no" id="457" name="opt6" pos_x="0" pos_y="154" use="mask" width="480">
+        <button background_colour="silver" border_colour="white" button_options="no_border" height="62" id="458" key_code="1" name="button0" options="supress_border+no_border" pos_x="130" pos_y="7" use="mask" width="220">
+          <rectangle height="62" id="459" line_suppression="" name="rectangle4" pos_x="0" pos_y="0" use="mask" width="220">
+            <fillattributes fill_colour="white" fill_type="pattern" id="460" name="white" role="" use="mask">
+              <picturegraphic id="461" name="picture8" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="mask" width="64">
+                <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+              </picturegraphic>
+            </fillattributes>
+            <lineattributes id="462" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          </rectangle>
+          <outputstring background_colour="white" height="31" horizontal_justification="middle" id="463" language="" length="7" name="label4" options="transparent" pos_x="3" pos_y="18" use="mask" value="Suporte" width="210">
+            <include_object id="465" name="black6x8" role="font_attributes"/>
+          </outputstring>
+        </button>
+      </container>
+    </container>
+  </datamask>
+  <picturegraphic id="464" name="picture1" options="transparent" transparency_colour="yellow" use="mask" width="64">
+    <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+  </picturegraphic>
+  <fontattributes font_colour="white" font_size="12x16" font_style="" font_type="latin1" id="465" language="" name="black6x8" use="mask"/>
+</objectpool>

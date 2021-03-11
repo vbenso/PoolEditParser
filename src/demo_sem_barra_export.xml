@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<objectpool dimension="480" fix_bitmap_path="images\" sk_height="32" sk_width="60" std_bitmap_path="images\">
+  <workingset background_colour="white" id="256" name="workingset" selectable="yes" use="designator">
+    <include_object id="268" name="datamask0" role="active_mask"/>
+    <container height="80" hidden="no" id="257" name="tabsup0" pos_x="0" pos_y="0" use="designator" width="80">
+      <polygon height="32" id="258" name="polygon3" polygon_type="convex" pos_x="0" pos_y="0" use="designator" width="59">
+        <point pos_x="0" pos_y="32"/>
+        <point pos_x="47" pos_y="32"/>
+        <point pos_x="59" pos_y="0"/>
+        <point pos_x="14" pos_y="0"/>
+        <fillattributes fill_colour="white" fill_type="pattern" id="259" name="white1" role="fill_attributes" use="designator">
+          <picturegraphic id="260" name="picture0" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+            <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+          </picturegraphic>
+        </fillattributes>
+        <lineattributes id="261" line_art="1111111111111111" line_colour="white" line_width="1" name="black2" role="line_attributes" use="designator"/>
+      </polygon>
+      <container height="80" hidden="no" id="262" name="F" pos_x="0" pos_y="0" use="designator" width="80">
+        <polygon height="31" id="263" name="polygon4" polygon_type="convex" pos_x="9" pos_y="-1" use="designator" width="47">
+          <fillattributes fill_colour="black" fill_type="pattern" id="264" name="white3" role="fill_attributes" use="designator">
+            <picturegraphic id="265" name="picture2" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="designator" width="64">
+              <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+            </picturegraphic>
+          </fillattributes>
+          <lineattributes id="266" line_art="1111111111111111" line_colour="white" line_width="1" name="black1" role="line_attributes" use="designator"/>
+          <point pos_x="1" pos_y="30"/>
+          <point pos_x="11" pos_y="30"/>
+          <point pos_x="15" pos_y="22"/>
+          <point pos_x="22" pos_y="22"/>
+          <point pos_x="29" pos_y="15"/>
+          <point pos_x="20" pos_y="15"/>
+          <point pos_x="16" pos_y="18"/>
+          <point pos_x="19" pos_y="12"/>
+          <point pos_x="30" pos_y="12"/>
+          <point pos_x="31" pos_y="11"/>
+          <point pos_x="31" pos_y="13"/>
+          <point pos_x="40" pos_y="4"/>
+          <point pos_x="13" pos_y="4"/>
+        </polygon>
+      </container>
+    </container>
+  </workingset>
+  <softkeymask background_colour="white" id="267" name="softkeymask" role="" use="designator"/>
+  <datamask background_colour="white" id="268" name="datamask0" role="" use="mask">
+    <softkeymask background_colour="white" id="269" name="softkeymask" role="soft_key_mask" use="designator">
+      <key background_colour="grey" id="270" key_code="1" name="softkey0" use="designator">
+        <container height="32" hidden="false" id="271" name="container" pos_x="14" pos_y="0" use="designator" width="32">
+          <outputstring background_colour="black" height="8" horizontal_justification="left" id="272" language="" length="3" name="label" options="transparent" pos_x="7" pos_y="13" use="designator" value="KEY" width="18">
+            <fontattributes font_colour="black" font_size="6x8" font_style="" font_type="latin1" id="273" language="" name="black6x8" role="font_attributes" use="designator"/>
+          </outputstring>
+        </container>
+      </key>
+    </softkeymask>
+    <container height="106" hidden="no" id="274" name="navbarson" pos_x="0" pos_y="0" use="mask" width="834">
+      <polygon height="62" id="275" name="polygon0" polygon_type="convex" pos_x="0" pos_y="0" use="mask" width="105">
+        <fillattributes fill_colour="black" fill_type="pattern" id="276" name="white" role="fill_attributes" use="mask">
+          <picturegraphic id="277" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="mask" width="64">
+            <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+          </picturegraphic>
+        </fillattributes>
+        <lineattributes id="278" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+        <point pos_x="00" pos_y="58"/>
+        <point pos_x="96" pos_y="58"/>
+        <point pos_x="73" pos_y="0"/>
+        <point pos_x="0" pos_y="0"/>
+      </polygon>
+      <polygon height="62" id="279" name="polygon2" polygon_type="convex" pos_x="362" pos_y="0" use="mask" width="113">
+        <fillattributes fill_colour="black" fill_type="pattern" id="280" name="white" role="fill_attributes" use="mask">
+          <picturegraphic id="281" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="mask" width="64">
+            <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+          </picturegraphic>
+        </fillattributes>
+        <lineattributes id="282" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+        <point pos_x="11" pos_y="57"/>
+        <point pos_x="114" pos_y="57"/>
+        <point pos_x="114" pos_y="-1"/>
+        <point pos_x="34" pos_y="-1"/>
+      </polygon>
+      <polygon height="62" id="283" name="polygon1" polygon_type="convex" pos_x="93" pos_y="0" use="mask" width="297">
+        <fillattributes fill_colour="black" fill_type="pattern" id="284" name="white" role="fill_attributes" use="mask">
+          <picturegraphic id="285" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="mask" width="64">
+            <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+          </picturegraphic>
+        </fillattributes>
+        <lineattributes id="286" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+        <point pos_x="27" pos_y="58"/>
+        <point pos_x="258" pos_y="58"/>
+        <point pos_x="282" pos_y="0"/>
+        <point pos_x="4" pos_y="0"/>
+      </polygon>
+      <polygon height="50" id="287" name="polygon5" polygon_type="convex" pos_x="5" pos_y="4" use="mask" width="75">
+        <lineattributes id="288" line_art="1111111111111111" line_colour="black" line_width="2" name="black1" role="line_attributes" use="mask"/>
+        <point pos_x="14" pos_y="28"/>
+        <point pos_x="24" pos_y="28"/>
+        <point pos_x="27" pos_y="30"/>
+        <point pos_x="48" pos_y="30"/>
+        <point pos_x="49" pos_y="28"/>
+        <point pos_x="48" pos_y="26"/>
+        <point pos_x="40" pos_y="25"/>
+        <point pos_x="52" pos_y="25"/>
+        <point pos_x="53" pos_y="23"/>
+        <point pos_x="52" pos_y="20"/>
+        <point pos_x="42" pos_y="20"/>
+        <point pos_x="52" pos_y="19"/>
+        <point pos_x="54" pos_y="17"/>
+        <point pos_x="53" pos_y="15"/>
+        <point pos_x="42" pos_y="15"/>
+        <point pos_x="51" pos_y="14"/>
+        <point pos_x="52" pos_y="12"/>
+        <point pos_x="50" pos_y="10"/>
+        <point pos_x="37" pos_y="10"/>
+        <point pos_x="33" pos_y="15"/>
+        <point pos_x="27" pos_y="18"/>
+        <point pos_x="33" pos_y="15"/>
+        <point pos_x="35" pos_y="10"/>
+        <point pos_x="42" pos_y="9"/>
+        <point pos_x="43" pos_y="5"/>
+        <point pos_x="39" pos_y="4"/>
+        <point pos_x="27" pos_y="6"/>
+        <point pos_x="23" pos_y="10"/>
+        <point pos_x="14" pos_y="10"/>
+      </polygon>
+      <ellipse ellipse_type="closed" end_angle="0" height="5" id="289" name="ellipse0" pos_x="41" pos_y="45" start_angle="0" use="mask" width="7">
+        <lineattributes id="290" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+      </ellipse>
+      <ellipse ellipse_type="closed" end_angle="0" height="5" id="291" name="ellipse4" pos_x="27" pos_y="44" start_angle="0" use="mask" width="7">
+        <lineattributes id="292" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+      </ellipse>
+      <ellipse ellipse_type="closed" end_angle="0" height="4" id="293" name="ellipse3" pos_x="38" pos_y="37" start_angle="0" use="mask" width="6">
+        <lineattributes id="294" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+      </ellipse>
+      <ellipse ellipse_type="closed" end_angle="0" height="4" id="295" name="ellipse2" pos_x="38" pos_y="26" start_angle="0" use="mask" width="4">
+        <lineattributes id="296" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+      </ellipse>
+      <ellipse ellipse_type="closed" end_angle="0" height="4" id="297" name="ellipse1" pos_x="30" pos_y="25" start_angle="0" use="mask" width="5">
+        <lineattributes id="298" line_art="1111111111111111" line_colour="black" line_width="1" name="black1" role="line_attributes" use="mask"/>
+      </ellipse>
+    </container>
+    <outputstring background_colour="white" height="79" horizontal_justification="left" id="299" language="" length="7" name="label0" options="transparent" pos_x="155" pos_y="13" use="mask" value="PLANTIO" width="230">
+      <fontattributes font_colour="white" font_size="24x32" font_style="normal" font_type="latin1" id="300" language="" name="black6x8" role="font_attributes" use="mask"/>
+    </outputstring>
+    <container height="81" hidden="no" id="301" name="OPCOES" pos_x="13" pos_y="193" use="mask" width="449">
+      <container height="80" hidden="no" id="302" name="PLANTANDO" pos_x="8" pos_y="-3" use="mask" width="432">
+        <polygon height="53" id="303" name="polygon20" polygon_type="convex" pos_x="217" pos_y="14" use="mask" width="213">
+          <lineattributes id="304" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          <point pos_x="187" pos_y="51"/>
+          <point pos_x="209" pos_y="1"/>
+          <point pos_x="24" pos_y="1"/>
+          <point pos_x="2" pos_y="51"/>
+        </polygon>
+        <polygon height="53" id="305" name="polygon21" polygon_type="convex" pos_x="8" pos_y="15" use="mask" width="213">
+          <lineattributes id="306" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          <point pos_x="187" pos_y="51"/>
+          <point pos_x="209" pos_y="1"/>
+          <point pos_x="24" pos_y="1"/>
+          <point pos_x="2" pos_y="51"/>
+          <fillattributes fill_colour="black" fill_type="pattern" id="307" name="white0" role="fill_attributes" use="mask">
+            <picturegraphic id="308" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="mask" width="64">
+              <image_data image_height="8" image_width="8">IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIw</image_data>
+            </picturegraphic>
+          </fillattributes>
+        </polygon>
+        <outputstring background_colour="black" height="21" horizontal_justification="left" id="309" language="" length="9" name="label30" options="transparent" pos_x="47" pos_y="32" use="mask" value="Plantando" width="146">
+          <fontattributes font_colour="white" font_size="12x16" font_style="bold" font_type="latin1" id="310" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <outputstring background_colour="white" height="21" horizontal_justification="left" id="311" language="" length="5" name="label33" options="transparent" pos_x="157" pos_y="49" use="mask" value="km/h" width="65">
+          <fontattributes font_colour="white" font_size="8x12" font_style="bold" font_type="latin1" id="312" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <outputstring background_colour="black" height="21" horizontal_justification="left" id="313" language="" length="5" name="label34" options="transparent" pos_x="283" pos_y="26" use="mask" value="20.0" width="65">
+          <fontattributes font_colour="black" font_size="16x24" font_style="bold" font_type="latin1" id="314" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <linearbargraph colour="green" height="8" id="315" max_value="1000" min_value="0" name="linearbargraph3" number_of_ticks="0" options="border+targetline+ticks+horizontal+growpositive" pos_x="244" pos_y="54" target_line_colour="red" target_value="667" use="mask" value="333" width="152">
+          <numbervariable id="316" name="numvar0" role="variable_reference" use="mask" value="200"/>
+          <numbervariable id="317" name="numvar1" role="target_value_variable_reference" use="mask" value="800"/>
+        </linearbargraph>
+      </container>
+      <container height="80" hidden="yes" id="318" name="parado" pos_x="8" pos_y="-3" use="mask" width="432">
+        <polygon height="53" id="319" name="polygon20" polygon_type="convex" pos_x="217" pos_y="14" use="mask" width="213">
+          <lineattributes id="320" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          <point pos_x="187" pos_y="51"/>
+          <point pos_x="209" pos_y="1"/>
+          <point pos_x="24" pos_y="1"/>
+          <point pos_x="2" pos_y="51"/>
+        </polygon>
+        <polygon height="53" id="321" name="polygon21" polygon_type="convex" pos_x="8" pos_y="15" use="mask" width="213">
+          <lineattributes id="322" line_art="1111111111111111" line_colour="green" line_width="1" name="black1" role="line_attributes" use="mask"/>
+          <point pos_x="187" pos_y="51"/>
+          <point pos_x="209" pos_y="1"/>
+          <point pos_x="24" pos_y="1"/>
+          <point pos_x="2" pos_y="51"/>
+          <fillattributes fill_colour="black" fill_type="pattern" id="323" name="white0" role="fill_attributes" use="mask">
+            <picturegraphic id="324" name="picture1" options="transparent" pos_x="0" pos_y="0" role="fill_pattern" transparency_colour="yellow" use="mask" width="64">
+              <image_data image_height="8" image_width="8">y8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLyw</image_data>
+            </picturegraphic>
+          </fillattributes>
+        </polygon>
+        <outputstring background_colour="black" height="21" horizontal_justification="left" id="325" language="" length="6" name="label30" options="transparent" pos_x="47" pos_y="32" use="mask" value="Parado" width="146">
+          <fontattributes font_colour="white" font_size="12x16" font_style="bold" font_type="latin1" id="326" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <outputstring background_colour="white" height="21" horizontal_justification="left" id="327" language="" length="5" name="label33" options="transparent" pos_x="157" pos_y="49" use="mask" value="km/h" width="65">
+          <fontattributes font_colour="white" font_size="8x12" font_style="bold" font_type="latin1" id="328" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <outputstring background_colour="black" height="21" horizontal_justification="left" id="329" language="" length="5" name="label34" options="transparent" pos_x="283" pos_y="26" use="mask" value="20.0" width="65">
+          <fontattributes font_colour="black" font_size="16x24" font_style="bold" font_type="latin1" id="330" language="" name="black6x8" role="font_attributes" use="mask"/>
+        </outputstring>
+        <linearbargraph colour="green" height="8" id="331" max_value="1000" min_value="0" name="linearbargraph3" number_of_ticks="0" options="border+targetline+ticks+horizontal+growpositive" pos_x="244" pos_y="54" target_line_colour="red" target_value="667" use="mask" value="333" width="152">
+          <numbervariable id="332" name="numvar0" role="variable_reference" use="mask" value="200"/>
+          <numbervariable id="333" name="numvar1" role="target_value_variable_reference" use="mask" value="800"/>
+        </linearbargraph>
+      </container>
+    </container>
+    <container height="114" hidden="no" id="334" name="dataehora0" pos_x="302" pos_y="-13" use="mask" width="205">
+      <outputstring background_colour="black" height="21" horizontal_justification="left" id="335" language="" length="5" name="label16" options="transparent" pos_x="89" pos_y="41" use="mask" value="15:20" width="89">
+        <fontattributes font_colour="white" font_size="16x24" font_style="bold" font_type="latin1" id="336" language="" name="black6x8" role="font_attributes" use="mask"/>
+      </outputstring>
+      <outputstring background_colour="black" height="13" horizontal_justification="left" id="337" language="" length="10" name="label13" options="transparent" pos_x="92" pos_y="24" use="mask" value="26/04/2021" width="91">
+        <fontattributes font_colour="white" font_size="8x12" font_style="bold" font_type="latin1" id="338" language="" name="black6x8" role="font_attributes" use="mask"/>
+      </outputstring>
+    </container>
+    <container height="116" hidden="no" id="339" name="sem/m0" pos_x="149" pos_y="85" use="mask" width="188">
+      <outputstring background_colour="black" height="48" horizontal_justification="left" id="9004" language="" length="4" name="label3" options="transparent" pos_x="21" pos_y="41" use="mask" value="99.0" width="150">
+        <fontattributes font_colour="black" font_size="32x48" font_style="normal" font_type="latin1" id="340" language="" name="black6x8" role="font_attributes" use="mask"/>
+      </outputstring>
+      <outputstring background_colour="black" height="26" horizontal_justification="left" id="341" language="" length="5" name="label11" options="transparent" pos_x="90" pos_y="83" use="mask" value="sem/m" width="84">
+        <include_object id="342" name="black6x8" role="font_attributes"/>
+      </outputstring>
+      <archedbargraph bar_graph_width="8" block_col="0" block_font_size="16x24" block_row="0" colour="red" end_angle="90" height="159" id="9001" max_value="1000" min_value="0" name="archedbargraph3" options="border+targetline+clockwise" pos_x="0" pos_y="0" start_angle="0" target_line_colour="red" target_value="999" use="mask" value="999" width="168">
+        <numbervariable id="9002" name="numvar2" role="variable_reference" use="mask" value="888"/>
+        <numbervariable id="9003" name="numvar3" role="target_value_variable_reference" use="mask" value="800"/>
+      </archedbargraph>
+    </container>
+    <container height="190" hidden="no" id="3000" name="container0" pos_x="0" pos_y="280" use="mask" width="480">
+      <container height="80" hidden="no" id="4000" name="container0" pos_x="0" pos_y="0" use="mask" width="80"/>
+    </container>
+  </datamask>
+  <fontattributes font_colour="black" font_size="16x24" font_style="bold" font_type="latin1" id="342" language="" name="black6x8" role="font_attributes" use="mask"/>
+</objectpool>
