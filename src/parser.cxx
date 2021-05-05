@@ -859,7 +859,13 @@ void *createObject(int type, const char **attr)
     }
     case 11: // OutputString
     {
-        OutputString *outputString = (OutputString *)calloc(sizeof(OutputString) + getLength(attr) + 1, 1);
+        char *test_string = getValueString(attr, 0);
+        int len = strlen(test_string);
+        if(getLength(attr)>0) {
+            len = getLength(attr);
+        }
+        
+        OutputString *outputString = (OutputString *)calloc(sizeof(OutputString) + len + 1, 1);
         outputString->objectId = id;
         outputString->type = type;
 
@@ -870,12 +876,12 @@ void *createObject(int type, const char **attr)
         outputString->options = getInputStringOptions(attr);
         outputString->variableReference = 65535;
         outputString->horizontalJustification = getHorizontalJustification(attr);
-        outputString->length = getLength(attr);
+        outputString->length = len;
 
         // copy string
-        char *string = getValueString(attr, getLength(attr));
-        memcpy(outputString->value, string, getLength(attr));
-        free(string);
+        //char *string = getValueString(attr, getLength(attr));
+        memcpy(outputString->value, test_string, len);
+        free(test_string);
 
         return outputString;
     }
@@ -1015,15 +1021,21 @@ void *createObject(int type, const char **attr)
     }
     case 22: // StringVariable
     {
-        StringVariable *stringVariable = (StringVariable *)calloc(sizeof(StringVariable) + getLength(attr), 1);
+        char *test_string = getValueString(attr, 0);
+        int len = strlen(test_string);
+        if(getLength(attr)>0) {
+            len = getLength(attr);
+        }
+        StringVariable *stringVariable = (StringVariable *)calloc(sizeof(StringVariable) + len, 1);
         stringVariable->objectId = id;
         stringVariable->type = type;
-        stringVariable->length = getLength(attr);
+        stringVariable->length = len;
 
         // copy string
-        char *string = getValueString(attr, getLength(attr));
-        memcpy((((char *)stringVariable) + 5), string, getLength(attr));
-        free(string);
+        //char *string = getValueString(attr, getLength(attr));
+        memcpy(stringVariable->data, test_string, len);
+        free(test_string);
+
         return stringVariable;
     }
     case 23: // FontAttributes

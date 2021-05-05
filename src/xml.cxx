@@ -47,9 +47,10 @@ float atof2(char *str)
 
 char *getAttribute(const char **attrs, const char *name)
 {
-    for (int i = 0; attrs[i]; i += 2) {
+    for (int i = 0; attrs[i]; i += 2)
+    {
         if (strcmp(attrs[i], name) == 0)
-            return (char *) attrs[i + 1]; // !!
+            return (char *)attrs[i + 1]; // !!
     }
     return NULL;
 }
@@ -59,10 +60,11 @@ char *getAttribute(const char **attrs, const char *name)
 char *str_dup(const char *p)
 {
     size_t len = strlen(p);
-    char *rv = (char *) malloc(len + 1);
-    if (rv == NULL) {
-	fprintf(stderr, "malloc failed!\n");
-	exit(1);
+    char *rv = (char *)malloc(len + 1);
+    if (rv == NULL)
+    {
+        fprintf(stderr, "malloc failed!\n");
+        exit(1);
     }
     strcpy(rv, p);
     return rv;
@@ -70,12 +72,18 @@ char *str_dup(const char *p)
 
 size_t get_length(unsigned char c)
 {
-    if (c < 0x80) return 1;
-    else if (!(c & 0x20)) return 2;
-    else if (!(c & 0x10)) return 3;
-    else if (!(c & 0x08)) return 4;
-    else if (!(c & 0x04)) return 5;
-    else return 6;
+    if (c < 0x80)
+        return 1;
+    else if (!(c & 0x20))
+        return 2;
+    else if (!(c & 0x10))
+        return 3;
+    else if (!(c & 0x08))
+        return 4;
+    else if (!(c & 0x04))
+        return 5;
+    else
+        return 6;
 }
 
 int utf8toLatin1Char(char **p)
@@ -86,7 +94,8 @@ int utf8toLatin1Char(char **p)
 
     int res = (**p & (0xFF >> (len + 1))) << ((len - 1) * 6);
 
-    for (--len; len; --len) {
+    for (--len; len; --len)
+    {
         ++(*p);
         res |= ((**p) - 0x80) << ((len - 1) * 6);
     }
@@ -97,9 +106,11 @@ int utf8toLatin1Char(char **p)
 char *utf8toLatin1Str(char *rv)
 {
     int i = 0;
-    for (char *p = rv; *p; ++p, ++i) {
+    for (char *p = rv; *p; ++p, ++i)
+    {
         int value = utf8toLatin1Char(&p);
-        if (value > 0xFF) {
+        if (value > 0xFF)
+        {
             fprintf(stderr, "utf8toLatin1Char() failed!\n");
             exit(1);
         }
@@ -114,18 +125,18 @@ char *getAttributeLatin1(const char **attrs, const char *name)
 {
     char *value = getAttribute(attrs, name);
     if (value == NULL)
-	return NULL;
+        return NULL;
     char *rv = str_dup(value);
     return utf8toLatin1Str(rv);
 }
-
 
 /////////////////
 
 char *getAttributeError(const char **attrs, const char *name)
 {
     char *retval = getAttribute(attrs, name);
-    if (retval == NULL) {
+    if (retval == NULL)
+    {
         printf("ERROR: can't find attribute: %s", name);
         exit(0);
     }
@@ -216,10 +227,10 @@ int getRole(const char **attrs)
 int getColor(const char **attrs, const char *name)
 {
     static const char *colors[] =
-	{"black", "white", "green", "teal",
-	 "maroon", "purple", "olive", "silver",
-	 "grey", "blue", "lime", "cyan",
-	 "red", "magenta", "yellow", "navy"};
+        {"black", "white", "green", "teal",
+         "maroon", "purple", "olive", "silver",
+         "grey", "blue", "lime", "cyan",
+         "red", "magenta", "yellow", "navy"};
 
     char *value = getAttribute(attrs, name);
     for (int i = 0; i < 16; i++)
@@ -233,38 +244,38 @@ int reduceColor(int color, int colors)
 {
     // these tables tell what is the nearest color
     unsigned char Colors256to16[] =
-	{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
-	 0, 0, 15, 15, 9, 9, 0, 0, 15, 15, 9, 9, 2, 2, 3, 3,
-	 3, 9, 2, 2, 3, 3, 3, 3,  2, 2, 3, 3, 3, 11, 10, 10,
-	 10, 3, 11, 11, 0, 0, 15, 15, 9, 9, 0, 0, 15, 15, 9, 9,
-	 2, 2, 3, 3, 3, 9, 2, 2, 3, 3, 3, 3, 2, 2, 3, 3,
-	 3, 11, 10, 10, 10, 3, 11, 11, 4, 4, 5, 5, 5, 9, 4, 4,
-	 5, 5, 5, 9, 6, 6, 8, 8, 8, 8, 6, 6, 8, 8, 8, 8,
-	 6, 6, 8, 8, 7, 7, 10, 10, 8, 8, 7, 11, 4, 4, 5, 5,
-	 5, 5, 4, 4, 5, 5, 5, 5, 6, 6, 8, 8, 8, 8, 6, 6,
-	 8, 8, 8, 8, 6, 6, 8, 8, 7, 7, 6, 6, 8, 8, 7, 1,
-	 4, 4, 5, 5, 5, 13, 4, 4, 5, 5, 5, 13, 6, 6, 8, 8,
-	 7, 7, 6, 6, 8, 8, 7, 7, 6, 6, 7, 7, 7, 7, 14, 14,
-	 7, 7, 7, 1, 12, 12, 12, 5, 13, 13, 12, 12, 12, 5, 13, 13,
-	 12, 12, 8, 8, 7, 13, 6, 6, 8, 8, 7, 1, 14, 14, 7, 7,
-	 7, 1, 14, 14, 14, 1, 1, 1};
+        {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+         0, 0, 15, 15, 9, 9, 0, 0, 15, 15, 9, 9, 2, 2, 3, 3,
+         3, 9, 2, 2, 3, 3, 3, 3, 2, 2, 3, 3, 3, 11, 10, 10,
+         10, 3, 11, 11, 0, 0, 15, 15, 9, 9, 0, 0, 15, 15, 9, 9,
+         2, 2, 3, 3, 3, 9, 2, 2, 3, 3, 3, 3, 2, 2, 3, 3,
+         3, 11, 10, 10, 10, 3, 11, 11, 4, 4, 5, 5, 5, 9, 4, 4,
+         5, 5, 5, 9, 6, 6, 8, 8, 8, 8, 6, 6, 8, 8, 8, 8,
+         6, 6, 8, 8, 7, 7, 10, 10, 8, 8, 7, 11, 4, 4, 5, 5,
+         5, 5, 4, 4, 5, 5, 5, 5, 6, 6, 8, 8, 8, 8, 6, 6,
+         8, 8, 8, 8, 6, 6, 8, 8, 7, 7, 6, 6, 8, 8, 7, 1,
+         4, 4, 5, 5, 5, 13, 4, 4, 5, 5, 5, 13, 6, 6, 8, 8,
+         7, 7, 6, 6, 8, 8, 7, 7, 6, 6, 7, 7, 7, 7, 14, 14,
+         7, 7, 7, 1, 12, 12, 12, 5, 13, 13, 12, 12, 12, 5, 13, 13,
+         12, 12, 8, 8, 7, 13, 6, 6, 8, 8, 7, 1, 14, 14, 7, 7,
+         7, 1, 14, 14, 14, 1, 1, 1};
 
     unsigned char Colors256to2[] =
-	{0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0,
-	 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0,
-	 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1,
-	 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0,
-	 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1,
-	 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0,
-	 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0,
-	 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-	 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1,
-	 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-	 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1,
-	 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-	 1, 1, 1, 1, 1, 1, 1, 1};
+        {0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0,
+         0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1,
+         1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1,
+         0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0,
+         0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0,
+         1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1,
+         1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1,
+         0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1};
 
     if (colors == 256)
         return color;
@@ -274,52 +285,64 @@ int reduceColor(int color, int colors)
         return Colors256to2[color];
 }
 
-int getReducedColor(const char **attrs, const char *name, int colors) {
+int getReducedColor(const char **attrs, const char *name, int colors)
+{
     return reduceColor(getColor(attrs, name), colors);
 }
 
-int getBackgroundColor(const char **attrs, int colors) {
+int getBackgroundColor(const char **attrs, int colors)
+{
     return getReducedColor(attrs, "background_colour", colors);
 }
 
-int getBorderColor(const char **attrs, int colors) {
+int getBorderColor(const char **attrs, int colors)
+{
     return getReducedColor(attrs, "border_colour", colors);
 }
 
-int getFontColor(const char **attrs, int colors) {
+int getFontColor(const char **attrs, int colors)
+{
     return getReducedColor(attrs, "font_colour", colors);
 }
 
-int getLineColor(const char **attrs, int colors) {
+int getLineColor(const char **attrs, int colors)
+{
     return getReducedColor(attrs, "line_colour", colors);
 }
 
-int getNeedleColor(const char **attrs, int colors) {
+int getNeedleColor(const char **attrs, int colors)
+{
     return getReducedColor(attrs, "needle_colour", colors);
 }
 
-int getArcAndTickColor(const char **attrs, int colors) {
+int getArcAndTickColor(const char **attrs, int colors)
+{
     return getReducedColor(attrs, "arc_and_tick_colour", colors);
 }
 
-int getColorColor(const char **attrs, int colors) {
+int getColorColor(const char **attrs, int colors)
+{
     return getReducedColor(attrs, "colour", colors);
 }
 
-int getTargetLineColor(const char **attrs, int colors) {
+int getTargetLineColor(const char **attrs, int colors)
+{
     return getReducedColor(attrs, "target_line_colour", colors);
 }
 
 //FIXME what should this return???
-int getTransparencyColor(const char **attrs) {
+int getTransparencyColor(const char **attrs)
+{
     return getColor(attrs, "transparency_colour");
 }
 
-int getFillColor(const char **attrs, int colors) {
+int getFillColor(const char **attrs, int colors)
+{
     return getReducedColor(attrs, "fill_colour", colors);
 }
 
-int getBoolean(const char **attrs, const char *name) {
+int getBoolean(const char **attrs, const char *name)
+{
     static const char *trues[] = {"yes", "true", "on", "show", "enable", "1"};
     char *value = getAttribute(attrs, name);
     for (int i = 0; i < 6; i++)
@@ -330,30 +353,35 @@ int getBoolean(const char **attrs, const char *name) {
 }
 
 // returns the value of selectable-attribute (0 or 1)
-int isSelectable(const char **attrs) {
+int isSelectable(const char **attrs)
+{
     return getBoolean(attrs, "selectable");
 }
 
-int isHidden(const char **attrs) {
+int isHidden(const char **attrs)
+{
     return getBoolean(attrs, "hidden");
 }
 
-int isLatchable(const char **attrs) {
+int isLatchable(const char **attrs)
+{
     return getBoolean(attrs, "latchable");
 }
 
 int getButtonOptions(const char **attrs)
 {
-    static const char *names[] = {"latchable", "latched", "supress_border", "transparent_background", "disabled" , "no_border"};
+    static const char *names[] = {"latchable", "latched", "supress_border", "transparent_background", "disabled", "no_border"};
     return getOptions(attrs, names, 6, "options");
 }
 
-int isEnabled(const char **attrs) {
+int isEnabled(const char **attrs)
+{
     return getBoolean(attrs, "enabled");
 }
 
 // returns the priority (0,1 or 2)
-int getPriority(const char **attrs) {
+int getPriority(const char **attrs)
+{
     static const char *priorities[] = {"high", "medium", "low"};
     char *value = getAttribute(attrs, "priority");
     for (int i = 0; i < 3; i++)
@@ -364,7 +392,8 @@ int getPriority(const char **attrs) {
 }
 
 // returns the acoustic signal (0,1,2 or 3)
-int getAcousticSignal(const char **attrs) {
+int getAcousticSignal(const char **attrs)
+{
     static const char *priorities[] = {"high", "medium", "low", "none"};
     char *value = getAttribute(attrs, "acoustic_signal");
     for (int i = 0; i < 4; i++)
@@ -375,7 +404,8 @@ int getAcousticSignal(const char **attrs) {
 }
 
 // returns the horizontal justification (0,1 or 2)
-int getHorizontalJustification(const char **attrs) {
+int getHorizontalJustification(const char **attrs)
+{
     static const char *priorities[] = {"left", "middle", "right"};
     char *value = getAttribute(attrs, "horizontal_justification");
     for (int i = 0; i < 3; i++)
@@ -385,10 +415,11 @@ int getHorizontalJustification(const char **attrs) {
     return atoi2(value);
 }
 
-int getEllipseType(const char **attrs) {
+int getEllipseType(const char **attrs)
+{
     static const char *types[] = {"closed", "open", "closedsegment", "closedsection"};
     char *value = getAttribute(attrs, "ellipse_type");
-    for (int i=0; i<4; i++)
+    for (int i = 0; i < 4; i++)
         if (strcmp(types[i], value) == 0)
             return i;
 
@@ -406,7 +437,8 @@ int getPolygonType(const char **attrs)
     return atoi2(value);
 }
 
-int getFillType(const char **attrs) {
+int getFillType(const char **attrs)
+{
     static const char *types[] = {"nofill", "linecolour", "fillcolour", "pattern"};
     char *value = getAttribute(attrs, "fill_type");
     for (int i = 0; i < 4; i++)
@@ -416,11 +448,12 @@ int getFillType(const char **attrs) {
     return atoi2(value);
 }
 
-int getFunctionType(const char **attrs) {
+int getFunctionType(const char **attrs)
+{
     static const char *types[] = {"boolean", "analog"};
     char *value = getAttribute(attrs, "function_type");
     for (int i = 0; i < 2; i++)
-        if (strcmp(types[i], value) == 0 )
+        if (strcmp(types[i], value) == 0)
             return i;
 
     return atoi2(value);
@@ -437,50 +470,61 @@ int getLineDirection(const char **attrs)
     return 0;
 }
 
-int getWidth(const char **attrs) {
-    return atoi2(getAttribute(attrs, "width") );
+int getWidth(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "width"));
 }
 
-int getHeight(const char **attrs) {
-    return atoi2(getAttribute(attrs, "height") );
+int getHeight(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "height"));
 }
 
-int getActualWidth(const char **attrs) {
-    return atoi2(getAttribute(attrs, "image_width") );
+int getActualWidth(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "image_width"));
 }
 
-int getActualHeight(const char **attrs) {
-    return atoi2(getAttribute(attrs, "image_height") );
+int getActualHeight(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "image_height"));
 }
 
-int getKeyCode(const char **attrs) {
-    return atoi2(getAttribute(attrs, "key_code") );
+int getKeyCode(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "key_code"));
 }
 
-unsigned int getValue(const char **attrs) {
+unsigned int getValue(const char **attrs)
+{
     // FIXME range
-    return atoi2(getAttribute(attrs, "value") );
+    return atoi2(getAttribute(attrs, "value"));
 }
 
-unsigned int getTargetValue(const char **attrs) {
-    return atoi2(getAttribute(attrs, "target_value") );
+unsigned int getTargetValue(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "target_value"));
 }
 
-unsigned int getMinValue(const char **attrs) {
+unsigned int getMinValue(const char **attrs)
+{
     // FIXME range
-    return atoi2(getAttribute(attrs, "min_value") );
+    return atoi2(getAttribute(attrs, "min_value"));
 }
 
-unsigned int getMaxValue(const char **attrs) {
+unsigned int getMaxValue(const char **attrs)
+{
     // FIXME range
-    return atoi2(getAttribute(attrs, "max_value") );
+    return atoi2(getAttribute(attrs, "max_value"));
 }
 
-int getOffset(const char **attrs) {
-    return atoi2(getAttribute(attrs, "offset") );
+int getOffset(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "offset"));
 }
 
-float getScale(const char **attrs) {
+float getScale(const char **attrs)
+{
     char *str = getAttribute(attrs, "scale");
 
     // check for empty string, default to 1!
@@ -490,42 +534,52 @@ float getScale(const char **attrs) {
     return atof(str);
 }
 
-int getNumberOfDecimals(const char **attrs) {
-    return atoi2(getAttribute(attrs, "number_of_decimals") );
+int getNumberOfDecimals(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "number_of_decimals"));
 }
 
-int getNumberOfTicks(const char **attrs) {
-    return atoi2(getAttribute(attrs, "number_of_ticks") );
+int getNumberOfTicks(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "number_of_ticks"));
 }
 
-int getLength(const char **attrs) {
-    return atoi2(getAttribute(attrs, "length") );
+int getLength(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "length"));
 }
 
-int getStartAngle(const char **attrs) {
-    return atoi2(getAttribute(attrs, "start_angle") );
+int getStartAngle(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "start_angle"));
 }
 
-int getEndAngle(const char **attrs) {
-    return atoi2(getAttribute(attrs, "end_angle") );
+int getEndAngle(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "end_angle"));
 }
 
-int getLineWidth(const char **attrs) {
-    return atoi2(getAttribute(attrs, "line_width") );
+int getLineWidth(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "line_width"));
 }
 
-int getBarGraphWidth(const char **attrs) {
-    return atoi2(getAttribute(attrs, "bar_graph_width") );
+int getBarGraphWidth(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "bar_graph_width"));
 }
 
-int getInputID(const char **attrs) {
-    return atoi2(getAttribute(attrs, "input_id") );
+int getInputID(const char **attrs)
+{
+    return atoi2(getAttribute(attrs, "input_id"));
 }
 
-int getLineArt(const char **attrs) {
+int getLineArt(const char **attrs)
+{
     int art = 0;
     char *value = getAttribute(attrs, "line_art");
-    for (int i = 0; value[i]; i++) {
+    for (int i = 0; value[i]; i++)
+    {
         art *= 2;
         if (value[i] == '1')
             art++;
@@ -534,14 +588,16 @@ int getLineArt(const char **attrs) {
 }
 
 // only one supported
-int getFontType(const char **attrs) {
+int getFontType(const char **attrs)
+{
     if (strstr(getAttribute(attrs, "font_type"), "latin1") != NULL)
         return 0;
 
     return 0;
 }
 
-int getValidationType(const char **attrs) {
+int getValidationType(const char **attrs)
+{
     if (strstr(getAttribute(attrs, "validation_type"), "invalidcharacters") != NULL)
         return 1;
 
@@ -552,31 +608,31 @@ int getValidationType(const char **attrs) {
 // given string must be freed!
 char *getValueString(const char **attrs, int length)
 {
-    char *string = (char *) malloc(sizeof(char) * length);
+    
     char *value = getAttributeLatin1(attrs, "value");
     int valueLength = strlen(value);
+    char *string = (char *)calloc(sizeof(char) * valueLength,' ');
+    printf("len:%d, real_len:%d, str:%s\n", length, valueLength, value);
 
-    if (length <= valueLength) {
-        memcpy(string, value, length);
-    }
-    else {
-        memcpy(string, value, valueLength);
-        memset(string + valueLength, ' ', length - valueLength);
-    }
+    memcpy(string, value, valueLength);
+
+    printf("output:%s\n", string);
     free(value);
     return string;
 }
 
 char *getValidatioinString(const char **attrs, int length)
 {
-    char *string = (char *) malloc(sizeof(char) * length);
+    char *string = (char *)malloc(sizeof(char) * length);
     char *value = getAttributeLatin1(attrs, "validation_string");
     int valueLength = strlen(value);
 
-    if (length <= valueLength) {
+    if (length <= valueLength)
+    {
         memcpy(string, value, length);
     }
-    else {
+    else
+    {
         memcpy(string, value, valueLength);
         memset(string + valueLength, ' ', length - valueLength);
     }
@@ -589,7 +645,8 @@ int getOptions(const char **attrs, const char **names, int bits, const char *nam
     char *options = getAttribute(attrs, name);
     int retVal = 0;
     int base = 1;
-    for (int i = 0; i < bits; i++) {
+    for (int i = 0; i < bits; i++)
+    {
         if (strstr(options, names[i]) != NULL)
             retVal += base;
         base *= 2;
@@ -641,7 +698,7 @@ int getMeterOptions(const char **attrs)
 
 int getLinearBarGraphOptions(const char **attrs)
 {
-    static const char *names[] = {"border", "targetline", "ticks", "nofill", "horizontal" , "growpositive"};
+    static const char *names[] = {"border", "targetline", "ticks", "nofill", "horizontal", "growpositive"};
     return getOptions(attrs, names, 6, "options");
 }
 
@@ -653,7 +710,7 @@ int getArchedBarGraphOptions(const char **attrs)
 
 int getPictureGraphicOptions(const char **attrs)
 {
-    static const char *names[] = {"transparent", "flashing", "rle"};  // No rle!
+    static const char *names[] = {"transparent", "flashing", "rle"}; // No rle!
     return getOptions(attrs, names, 3, "options");
 }
 
@@ -706,28 +763,30 @@ int getNumberFormat(const char **attrs)
 int getFontSize2(const char **attrs, const char *name)
 {
     static const char *fonts[] = {"6x8", "8x8", "8x12",
-				  "12x16", "16x16", "16x24",
-				  "24x32", "32x32", "32x48",
-				  "48x64", "64x64", "64x96",
-				  "96x128", "128x128", "128x192"};
+                                  "12x16", "16x16", "16x24",
+                                  "24x32", "32x32", "32x48",
+                                  "48x64", "64x64", "64x96",
+                                  "96x128", "128x128", "128x192"};
 
     char *value = getAttribute(attrs, name);
     for (int i = 0; i < 15; i++)
-        if (strcmp(fonts[i], value) == 0 )
+        if (strcmp(fonts[i], value) == 0)
             return i;
 
     return atoi2(value);
 }
 
-int getFontSize(const char **attrs){
+int getFontSize(const char **attrs)
+{
     return getFontSize2(attrs, "font_size");
 }
 
-int getBlockFontWidth(const char **attrs, int fontMultiplier) {
-    int widths[] = {6,  8,   8,
-                    12, 16,  16,
-                    24, 32,  32,
-                    48, 64,  64,
+int getBlockFontWidth(const char **attrs, int fontMultiplier)
+{
+    int widths[] = {6, 8, 8,
+                    12, 16, 16,
+                    24, 32, 32,
+                    48, 64, 64,
                     96, 128, 128};
 
     if (getAttribute(attrs, "block_font_size") == NULL)
@@ -739,11 +798,12 @@ int getBlockFontWidth(const char **attrs, int fontMultiplier) {
     return widths[font];
 }
 
-int getBlockFontHeight(const char **attrs, int fontMultiplier) {
-    int heights[] = {8,   8,   12,
-                     16,  16,  24,
-                     32,  32,  48,
-                     64,  64,  96,
+int getBlockFontHeight(const char **attrs, int fontMultiplier)
+{
+    int heights[] = {8, 8, 12,
+                     16, 16, 24,
+                     32, 32, 48,
+                     64, 64, 96,
                      128, 128, 192};
 
     if (getAttribute(attrs, "block_font_size") == NULL)
@@ -887,12 +947,13 @@ float getMultiplier(const char **attrs, float old, float mask, float designator)
     float multip = old;
     char *value = getAttribute(attrs, "use");
 
-    if (value != NULL) {
+    if (value != NULL)
+    {
         if (strcmp(value, "mask") == 0)
             multip = mask;
         else if (strcmp(value, "designator") == 0)
             multip = designator;
-        else if (strcmp(value, "both") == 0)  // if 'both' use smaller
+        else if (strcmp(value, "both") == 0) // if 'both' use smaller
             multip = (mask < designator) ? mask : designator;
     }
     return multip;

@@ -437,6 +437,7 @@ typedef struct
 
     unsigned short length;
     // data
+    unsigned char data[];
 } StringVariable;
 
 typedef struct
