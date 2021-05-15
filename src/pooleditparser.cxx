@@ -85,7 +85,7 @@ void addToList(char *bff)
 //
 // function for printing the linked list
 //
-void printList(FILE* fout)
+void printList(FILE *fout)
 {
     node_t *node = list_start;
     while (node != NULL)
@@ -109,12 +109,15 @@ void ascii_ready(char *data, int length)
         else
         {
             fprintf(fileOut, ", ");
-            if (i == 0)
-            {
-                fprintf(fileOut, "\n  ");
-            }
         }
-        fprintf(fileOut, "%i", (unsigned char)data[i]);
+
+        if (i == 0)
+        {
+            unsigned short id = ((unsigned char)data[1] << 8) | ((unsigned char)data[0]);
+            fprintf(fileOut, "\n/*ID: %05d */ ", id);
+        }
+
+        fprintf(fileOut, "%d", (unsigned char)data[i]);
     }
     pool_size += length;
     nro_total_objects++;
@@ -311,9 +314,8 @@ int main(int argc, char *argv[])
         fprintf(fileOutHeader, "#ifndef %s\n#define %s\n#include \"stdint.h\"\n", header_guard, header_guard);
         fprintf(fileOutHeader, "extern unsigned char %s[];\n", argv[2]);
         fprintf(fileOutHeader, "extern uint32_t %s_len;\n", argv[2]);
-        
 
-        fprintf(fileOut, "#include \"%s.h\"\n\n", argv[2]);    
+        fprintf(fileOut, "#include \"%s.h\"\n\n", argv[2]);
         fprintf(fileOut, "unsigned char %s[] = {\n  ", argv[2]);
 
         parse(fileIn, starts, ends, ascii_ready, dimension, skWidth, skHeight, colors);

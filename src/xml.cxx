@@ -612,11 +612,11 @@ char *getValueString(const char **attrs, int length)
     char *value = getAttributeLatin1(attrs, "value");
     int valueLength = strlen(value);
     char *string = (char *)calloc(sizeof(char) * valueLength,' ');
-    printf("len:%d, real_len:%d, str:%s\n", length, valueLength, value);
+    //printf("len:%d, real_len:%d, str:%s\n", length, valueLength, value);
 
     memcpy(string, value, valueLength);
 
-    printf("output:%s\n", string);
+    //printf("output:%s\n", string);
     free(value);
     return string;
 }
