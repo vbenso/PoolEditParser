@@ -226,22 +226,6 @@ int main(int argc, char *argv[])
         exit(-2);
     }
 
-    char buffer[1024];
-    sprintf(buffer, "%s.cpp", argv[2]);
-    fileOut = fopen(buffer, "w");
-    if (fileOut == NULL)
-    {
-        printf("Can't open file: %s\n", buffer);
-        exit(-3);
-    }
-    sprintf(buffer, "%s.h", argv[2]);
-    fileOutHeader = fopen(buffer, "w");
-    if (fileOutHeader == NULL)
-    {
-        printf("Can't open file: %s\n", buffer);
-        exit(-3);
-    }
-
     // evaluate other arguments
     for (int i = 3; i < argc; i++)
     {
@@ -298,6 +282,22 @@ int main(int argc, char *argv[])
         colors = 256;
     }
 
+    char buffer[1024];
+    sprintf(buffer, "%s_%d.cpp", argv[2], dimension);
+    fileOut = fopen(buffer, "w");
+    if (fileOut == NULL)
+    {
+        printf("Can't open file: %s\n", buffer);
+        exit(-3);
+    }
+    sprintf(buffer, "%s_%d.h", argv[2], dimension);
+    fileOutHeader = fopen(buffer, "w");
+    if (fileOutHeader == NULL)
+    {
+        printf("Can't open file: %s\n", buffer);
+        exit(-3);
+    }
+
     // print settings
     printf(
         "***************************************************\n"
@@ -310,17 +310,17 @@ int main(int argc, char *argv[])
     if (printTable)
     {
         char header_guard[256];
-        sprintf(header_guard, "_%s_H", argv[2]);
+        sprintf(header_guard, "_%s_%d_H", argv[2], dimension);
         fprintf(fileOutHeader, "#ifndef %s\n#define %s\n#include \"stdint.h\"\n", header_guard, header_guard);
-        fprintf(fileOutHeader, "extern const unsigned char %s[];\n", argv[2]);
-        fprintf(fileOutHeader, "extern const uint32_t %s_len;\n", argv[2]);
+        fprintf(fileOutHeader, "extern const unsigned char %s_%d[];\n", argv[2], dimension);
+        fprintf(fileOutHeader, "extern const uint32_t %s_%d_len;\n", argv[2], dimension);
 
-        fprintf(fileOut, "#include \"%s.h\"\n\n", argv[2]);
-        fprintf(fileOut, "const unsigned char %s[] = {\n  ", argv[2]);
+        fprintf(fileOut, "#include \"%s_%d.h\"\n\n", argv[2], dimension);
+        fprintf(fileOut, "const unsigned char %s_%d[] = {\n  ", argv[2], dimension);
 
         parse(fileIn, starts, ends, ascii_ready, dimension, skWidth, skHeight, colors);
         fprintf(fileOut, "\n};\n\n");
-        fprintf(fileOut, "const uint32_t %s_len = %d;\n", argv[2], pool_size);
+        fprintf(fileOut, "const uint32_t %s_%d_len = %d;\n", argv[2], dimension, pool_size);
         printList(fileOutHeader);
         fprintf(fileOutHeader, "#endif");
         fclose(fileOutHeader);
