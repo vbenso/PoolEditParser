@@ -633,7 +633,7 @@ void addPictureData(void **object)
         uint32_t total_count = 0;
         int changes = 0;
         int i = 1;
-        //do a dry run in order to know the final size of the required array
+        // do a dry run in order to know the final size of the required array
         while (i < size)
         {
             if (count == 254)
@@ -665,7 +665,7 @@ void addPictureData(void **object)
         }
         else
         {
-            //RLE is suitable for this image, let's do it
+            // RLE is suitable for this image, let's do it
             picture->options |= 0x04;
             new_data = (unsigned char *)malloc(changes * sizeof(uint16_t));
             memset(new_data, 0x00, changes * 2);
@@ -674,7 +674,7 @@ void addPictureData(void **object)
             total_count = 0;
             changes = 0;
             i = 1;
-            //do a dry run in order to know the final size of the required array
+            // do a dry run in order to know the final size of the required array
             while (i < size)
             {
                 if (count == 254)
@@ -733,6 +733,7 @@ void *createObject(int type, const char **attr)
     int id = getId(attr);
 
     multiplier = getMultiplier(attr, multiplier, xform.dm_mult, xform.sk_mult);
+    multiplier = vtDimension/480.0f;
 
     switch (type)
     {
@@ -762,6 +763,7 @@ void *createObject(int type, const char **attr)
     case 3: // Container
     {
         INIT_OBJECT(Container, container);
+        printf("OldW:%dpx NewW:%dps - %.2f\n", getWidth(attr), (int)(getWidth(attr)*multiplier), multiplier);
         container->width = (int)(multiplier * getWidth(attr));
         container->height = (int)(multiplier * getHeight(attr));
         container->hidden = isHidden(attr);
@@ -861,10 +863,11 @@ void *createObject(int type, const char **attr)
     {
         char *test_string = getValueString(attr, 0);
         int len = strlen(test_string);
-        if(getLength(attr)>0) {
+        if (getLength(attr) > 0)
+        {
             len = getLength(attr);
         }
-        
+
         OutputString *outputString = (OutputString *)calloc(sizeof(OutputString) + len + 1, 1);
         outputString->objectId = id;
         outputString->type = type;
@@ -879,7 +882,7 @@ void *createObject(int type, const char **attr)
         outputString->length = len;
 
         // copy string
-        //char *string = getValueString(attr, getLength(attr));
+        // char *string = getValueString(attr, getLength(attr));
         memcpy(outputString->value, test_string, len);
         free(test_string);
 
@@ -1000,8 +1003,8 @@ void *createObject(int type, const char **attr)
     {
         INIT_OBJECT(PictureGraphic, pictureGraphic);
         pictureGraphic->width = (int)(multiplier * getWidth(attr));
-        //pictureGraphic->actualWidth = getActualWidth(attr);
-        //pictureGraphic->actualHeight = getActualHeight(attr);
+        // pictureGraphic->actualWidth = getActualWidth(attr);
+        // pictureGraphic->actualHeight = getActualHeight(attr);
         pictureGraphic->format = 0; // = 2 colors
         if (vtColors == 16)
             pictureGraphic->format = 1; // = 16 colors
@@ -1023,7 +1026,8 @@ void *createObject(int type, const char **attr)
     {
         char *test_string = getValueString(attr, 0);
         int len = strlen(test_string);
-        if(getLength(attr)>0) {
+        if (getLength(attr) > 0)
+        {
             len = getLength(attr);
         }
         StringVariable *stringVariable = (StringVariable *)calloc(sizeof(StringVariable) + len, 1);
@@ -1032,7 +1036,7 @@ void *createObject(int type, const char **attr)
         stringVariable->length = len;
 
         // copy string
-        //char *string = getValueString(attr, getLength(attr));
+        // char *string = getValueString(attr, getLength(attr));
         memcpy(stringVariable->data, test_string, len);
         free(test_string);
 
@@ -1084,7 +1088,7 @@ void *createObject(int type, const char **attr)
         objectPointer->value = getValue(attr);
         if (objectPointer->value == 0)
         {
-            objectPointer->value = 65535; //without value, ObjectPointer should point to the NULL object, which is 65535
+            objectPointer->value = 65535; // without value, ObjectPointer should point to the NULL object, which is 65535
         }
         return objectPointer;
     }
@@ -1500,7 +1504,7 @@ void start(void *data, const char *el, const char **attr)
     // "role" attribute)
     if ((objectsInStack > 0) && (eventId > 0))
     {
-        //printf("add macro\n");
+        // printf("add macro\n");
         MacroReference macro;
         macro.eventId = eventId;
         macro.macroId = getId(attr);
@@ -1553,8 +1557,8 @@ void start(void *data, const char *el, const char **attr)
             xform.sk_dy = 0;
         }
 
-        //printf("dm_mult: %f sk_mult: %f dm_dx: %i dm_dy: %i sk_dx: %i sk_dy: %i\n",
-        //       dm_mult, sk_mult, dm_dx, dm_dy, sk_dx, sk_dy);
+        // printf("dm_mult: %f sk_mult: %f dm_dx: %i dm_dy: %i sk_dx: %i sk_dy: %i\n",
+        //        dm_mult, sk_mult, dm_dx, dm_dy, sk_dx, sk_dy);
     }
 
     // if element is point, add it to its parent (should be a polygon)
@@ -1582,7 +1586,7 @@ void start(void *data, const char *el, const char **attr)
     // if elment is a command, add it to a macro
     else if ((command >= 0) && (objectsInStack > 0))
     {
-        //printf("command: %s\n", el);
+        // printf("command: %s\n", el);
         void *comm = createCommand(command, attr);
         addCommand(&objectStack[objectsInStack - 1], comm);
         free(comm);
