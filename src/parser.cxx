@@ -1046,7 +1046,8 @@ void *createObject(int type, const char **attr)
     {
         INIT_OBJECT(FontAttributes, fontAttributes);
         fontAttributes->fontColor = getFontColor(attr, vtColors);
-        fontAttributes->fontSize = getFontSize(attr) + ((int)(multiplier)-1) * 3;
+        fontAttributes->fontSize = getFontSize(attr) + (int)(((multiplier)-1) * 3);
+        printf("oFS:%d - rFS:%d\n", getFontSize(attr), fontAttributes->fontSize);
         fontAttributes->fontType = getFontType(attr);
         fontAttributes->fontStyle = getFontStyle(attr);
 
@@ -1193,8 +1194,8 @@ void *createCommand(int command, const char **attr)
         changeChildLocation->VTFunction = 165;
         changeChildLocation->parentId = getParentId(attr);
         changeChildLocation->childId = getChildId(attr);
-        changeChildLocation->dx = ((int)multiplier * getDx(attr)) + 127; // this can be dangerous!
-        changeChildLocation->dy = ((int)multiplier * getDy(attr)) + 127;
+        changeChildLocation->dx = ((int)(multiplier * getDx(attr)) + 127); // this can be dangerous!
+        changeChildLocation->dy = ((int)(multiplier * getDy(attr)) + 127);
         changeChildLocation->padding = 0xFF;
         return changeChildLocation;
     }
@@ -1203,8 +1204,8 @@ void *createCommand(int command, const char **attr)
         ChangeSize *changeSize = (ChangeSize *)object;
         changeSize->VTFunction = 166;
         changeSize->objectId = getObjectId(attr);
-        changeSize->width = ((int)multiplier * getWidth(attr));
-        changeSize->height = ((int)multiplier * getHeight(attr));
+        changeSize->width = ((int)(multiplier * getWidth(attr)));
+        changeSize->height = ((int)(multiplier * getHeight(attr)));
         changeSize->padding = 0xFF;
         return changeSize;
     }
@@ -1245,8 +1246,8 @@ void *createCommand(int command, const char **attr)
         ChangeEndPoint *changeEndPoint = (ChangeEndPoint *)object;
         changeEndPoint->VTFunction = 169;
         changeEndPoint->objectId = getObjectId(attr);
-        changeEndPoint->width = ((int)multiplier * getWidth(attr));
-        changeEndPoint->height = ((int)multiplier * getHeight(attr));
+        changeEndPoint->width = ((int)(multiplier * getWidth(attr)));
+        changeEndPoint->height = ((int)(multiplier * getHeight(attr)));
         changeEndPoint->lineDirection = getLineDirection(attr);
         return changeEndPoint;
     }
@@ -1256,7 +1257,7 @@ void *createCommand(int command, const char **attr)
         changeFontAttributes->VTFunction = 170;
         changeFontAttributes->objectId = getObjectId(attr);
         changeFontAttributes->fontColor = getFontColor(attr, vtColors);
-        changeFontAttributes->fontSize = getFontSize(attr) + ((int)multiplier - 1) * 3;
+        changeFontAttributes->fontSize = getFontSize(attr) + (int)((multiplier - 1) * 3);
         changeFontAttributes->fontType = getFontType(attr);
         changeFontAttributes->fontStyle = getFontStyle(attr);
         changeFontAttributes->padding = 0xFF;
@@ -1268,7 +1269,7 @@ void *createCommand(int command, const char **attr)
         changeLineAttributes->VTFunction = 171;
         changeLineAttributes->objectId = getObjectId(attr);
         changeLineAttributes->lineColor = getLineColor(attr, vtColors);
-        changeLineAttributes->lineWidth = (int)multiplier * getLineWidth(attr);
+        changeLineAttributes->lineWidth = (int)(multiplier * getLineWidth(attr));
         changeLineAttributes->lineArt = getLineArt(attr);
         changeLineAttributes->padding = 0xFF;
         return changeLineAttributes;
@@ -1339,8 +1340,8 @@ void *createCommand(int command, const char **attr)
         changeChildPosition->VTFunction = 180;
         changeChildPosition->parentId = getParentId(attr);
         changeChildPosition->childId = getChildId(attr);
-        changeChildPosition->x = ((int)multiplier * getPosX(attr));
-        changeChildPosition->y = ((int)multiplier * getPosY(attr));
+        changeChildPosition->x = ((int)(multiplier * getPosX(attr)));
+        changeChildPosition->y = ((int)(multiplier * getPosY(attr)));
         return changeChildPosition;
     }
     default:
