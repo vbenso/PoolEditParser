@@ -481,20 +481,20 @@ void addObjectReference(void **object, ObjectReference objectReference, int role
     }
     if (role == ROLE_FILL_PATTERN)
     {
-        if (objectType == 25) 
+        if (objectType == 25)
         {
             FillAttributes *obj = ((FillAttributes *)*object);
             printf("FA objectId: %d, fillType:%d\n", ((ObjectHeader *)*object)->objectId, obj->fillType);
-            
-            if(obj->fillType == 3) 
+
+            if (obj->fillType == 3)
             {
                 obj->fillPattern = objectReference.objectId;
-            } 
-            else 
+            }
+            else
             {
                 obj->fillPattern = 0xFFFF;
                 printf("Object %i (Id=%i) fillType: %i, will have fill pattern 0xFFFF!\n",
-                    ((ObjectHeader *)*object)->type, ((ObjectHeader *)*object)->objectId, obj->fillType);
+                       ((ObjectHeader *)*object)->type, ((ObjectHeader *)*object)->objectId, obj->fillType);
             }
         }
         else
@@ -619,9 +619,9 @@ typedef struct
 
 typedef struct __attribute__((packed))
 {
-    uint8_t blue;    
+    uint8_t blue;
     uint8_t green;
-    uint8_t red;    
+    uint8_t red;
     uint8_t reserved;
 } RGBQuad;
 
@@ -658,8 +658,8 @@ void WriteRLEtoBMP(RLE_Element *rleData, int width, int height, const char *file
     // Write header to file
     fwrite(&header, 1, BMP_HEADER_SIZE, f);
 
-    RGBQuad* palette = (RGBQuad*)malloc(sizeof(RGBQuad)*NUM_COLORS);
-    memset(palette, 0xFF, sizeof(RGBQuad)*NUM_COLORS);
+    RGBQuad *palette = (RGBQuad *)malloc(sizeof(RGBQuad) * NUM_COLORS);
+    memset(palette, 0xFF, sizeof(RGBQuad) * NUM_COLORS);
     /*          RR,GG,BB,AA
     0 (Black)	00,00,00,FF
     1 (White)	FF,FF,FF,FF
@@ -680,41 +680,41 @@ void WriteRLEtoBMP(RLE_Element *rleData, int width, int height, const char *file
     */
 
     RGBQuad palette_16[16] = {
-        {0x00,0x00,0x00,0xFF},
-        {0xFF,0xFF,0xFF,0xFF},
-        {0x00,0x99,0x00,0xFF},
-        {0x99,0x99,0x00,0xFF},
-        {0x00,0x00,0x99,0xFF},
-        {0x99,0x00,0x99,0xFF},
-        {0x00,0x99,0x99,0xFF},
-        {0xCC,0xCC,0xCC,0xFF},
-        {0x99,0x99,0x99,0xFF},
-        {0xFF,0x00,0x00,0xFF},
-        {0x00,0xFF,0x00,0xFF},
-        {0xFF,0xFF,0x00,0xFF},
-        {0x00,0x00,0xFF,0xFF},
-        {0xFF,0x00,0xFF,0xFF},
-        {0x00,0xFF,0xFF,0xFF},
-        {0x99,0x00,0x00,0xFF}
-    };
-    memcpy(palette, palette_16, 16*sizeof(RGBQuad));
+        {0x00, 0x00, 0x00, 0xFF},
+        {0xFF, 0xFF, 0xFF, 0xFF},
+        {0x00, 0x99, 0x00, 0xFF},
+        {0x99, 0x99, 0x00, 0xFF},
+        {0x00, 0x00, 0x99, 0xFF},
+        {0x99, 0x00, 0x99, 0xFF},
+        {0x00, 0x99, 0x99, 0xFF},
+        {0xCC, 0xCC, 0xCC, 0xFF},
+        {0x99, 0x99, 0x99, 0xFF},
+        {0xFF, 0x00, 0x00, 0xFF},
+        {0x00, 0xFF, 0x00, 0xFF},
+        {0xFF, 0xFF, 0x00, 0xFF},
+        {0x00, 0x00, 0xFF, 0xFF},
+        {0xFF, 0x00, 0xFF, 0xFF},
+        {0x00, 0xFF, 0xFF, 0xFF},
+        {0x99, 0x00, 0x00, 0xFF}};
+    memcpy(palette, palette_16, 16 * sizeof(RGBQuad));
 
     int table[6] = {0x00, 0x33, 0x66, 0x99, 0xCC, 0xFF};
     int palette_idx = 16;
-    for(int i_r=0;i_r<6;i_r++) {
-        for(int i_g=0;i_g<6;i_g++) {
-            for(int i_b=0;i_b<6;i_b++)
+    for (int i_r = 0; i_r < 6; i_r++)
+    {
+        for (int i_g = 0; i_g < 6; i_g++)
+        {
+            for (int i_b = 0; i_b < 6; i_b++)
             {
                 palette[palette_idx].red = table[i_r];
                 palette[palette_idx].green = table[i_g];
                 palette[palette_idx].blue = table[i_b];
-                //printf("%d,%02X,%02X,%02X\n", palette_idx, palette[palette_idx].red, palette[palette_idx].green, palette[palette_idx].blue);
+                // printf("%d,%02X,%02X,%02X\n", palette_idx, palette[palette_idx].red, palette[palette_idx].green, palette[palette_idx].blue);
                 palette_idx++;
             }
         }
     }
     printf("Palette has %d entries\n", palette_idx);
-
 
     if (fwrite(palette, sizeof(RGBQuad), NUM_COLORS, f) != palette_idx)
     {
@@ -726,27 +726,32 @@ void WriteRLEtoBMP(RLE_Element *rleData, int width, int height, const char *file
     // Write RLE data to file
     int offset = 0;
     int all_counts = 0;
-    uint8_t* img_mirror = (uint8_t*)malloc(width*height);
-    uint8_t* img_mirror_ptr = img_mirror;
-    //transcribe the image to an array
-    do
+    uint8_t *img_mirror = (uint8_t *)malloc(width * height);
+    uint8_t *img_mirror_ptr = img_mirror;
+    // transcribe the image to an array
+    while (1)
     {
         uint8_t val = (rleData[offset].val);
         // printf("%d,%d\n", rleData[offset].count, val);
         all_counts += rleData[offset].count;
         for (int k = 0; k < rleData[offset].count; k++)
         {
-            //fwrite(&val, 1, 1, f);
+            // fwrite(&val, 1, 1, f);
             *img_mirror_ptr = val;
             img_mirror_ptr++;
         }
+        if (rleData[offset].finish)
+        {
+            break;
+        }
         offset++;
+    };
 
-    } while (!rleData[offset].finish);
-
-    //write the image to file flipping it upside down
-    for (int i = height - 1; i >= 0; i--) {
-        if (fwrite(&(img_mirror[i*width]), 1, width, f) != width) {
+    // write the image to file flipping it upside down
+    for (int i = height - 1; i >= 0; i--)
+    {
+        if (fwrite(&(img_mirror[i * width]), 1, width, f) != width)
+        {
             perror("Error writing image data");
             fclose(f);
             return;
@@ -762,10 +767,123 @@ void WriteRLEtoBMP(RLE_Element *rleData, int width, int height, const char *file
     fclose(f);
 }
 
+uint8_t *RLE_Encode(uint8_t *data, size_t size, RLE_Element **rle, int verbose)
+{
+    if (vtColors == 256)
+    {
+        const uint8_t max_count = 250; // Max value for a 7-bit count, assuming 128 max run length
+        uint8_t *new_data = NULL;
+        uint8_t val = data[0];
+        uint8_t count = 1;
+        size_t changes = 0;
+        size_t total_count = 0;
+        size_t i = 1;
+
+        // Dry run to determine the size of the compressed data
+        while (i < size)
+        {
+            if (data[i] == val && count < max_count)
+            {
+                count++;
+            }
+            else
+            {
+                total_count += 2; // Each change adds 2 bytes (count + value)
+                val = data[i];
+                count = 1;
+                changes++;
+            }
+            i++;
+        }
+        total_count += 2; // Add last run
+        changes++;
+
+        printf("Total compressed size: %zu bytes - %zu changes\n", total_count, changes);
+
+        if (total_count >= size)
+        {
+            printf("RLE isn't efficient for this object. Encoding it RAW.\n");
+        }
+        else
+        {
+
+            new_data = (uint8_t *)malloc(total_count);
+            if (!new_data)
+            {
+                perror("Failed to allocate memory for RLE data");
+                return NULL;
+            }
+
+            size_t new_index = 0;
+            val = data[0];
+            count = 1;
+            i = 1;
+
+            // Actual compression
+            while (i <= size)
+            { // Including size to handle the final run
+                if (i < size && data[i] == val && count < max_count)
+                {
+                    count++;
+                }
+                else
+                {
+                    if (verbose)
+                    {
+                        printf("Count:%d, val:%d @ pair:%d\n", count, val, new_index / 2);
+                    }
+                    new_data[new_index++] = count;
+                    new_data[new_index++] = val;
+                    if (i < size)
+                    {
+                        val = data[i];
+                        count = 1;
+                    }
+                }
+                i++;
+            }
+        }
+
+        if (new_data)
+        {
+            // Convert compressed data to RLE_Element format
+            RLE_Element *rle_data = (RLE_Element *)malloc(changes * sizeof(RLE_Element));
+            if (!rle_data)
+            {
+                perror("Failed to allocate memory for RLE_Element data");
+                free(new_data);
+                return NULL;
+            }
+
+            int total_count = 0;
+            for (i = 0; i < changes; i++)
+            {
+                rle_data[i].count = new_data[i * 2];
+                total_count += rle_data[i].count;
+                rle_data[i].val = new_data[i * 2 + 1];
+                rle_data[i].finish = i == changes - 1 ? 1 : 0; // Assuming this needs to be set to something meaningful
+                if (rle_data[i].finish && verbose)
+                {
+
+                    printf("Finish set at %d - total_count:%d\n", i, total_count);
+                }
+            }
+
+            // Here you should replace the original data with the compressed data
+            // And update any necessary pointers, sizes, etc.
+            *rle = rle_data;
+            return new_data;
+        }
+    }
+    return NULL;
+}
+
 // Adds image data to image object
 // Image will have 2,16 or 256 colors according to VT's color depth
 void addPictureData(void **object)
 {
+    int verbose = 0;
+
     if (getObjectType(*object) != 20)
     {
         printf("ERROR. Object %i can't have pictureData!\n",
@@ -773,6 +891,10 @@ void addPictureData(void **object)
         return;
     }
     PictureGraphic *picture = (PictureGraphic *)*object;
+    if (picture->objectId == 1398)
+    {
+        verbose = 1;
+    }
     int size = picture->actualWidth * picture->actualHeight;
     if (size != getDataLength(dataLength))
     {
@@ -815,113 +937,47 @@ void addPictureData(void **object)
 
     if (vtColors == 256)
     {
-        printf("obj_ID:%d accepts a RLE compression, let's try it!", picture->objectId);
-        uint8_t *new_data = NULL;
-        uint8_t val = data[0];
-        uint8_t count = 1;
-        uint32_t total_count = 0;
-        int changes = 0;
-        int i = 1;
-        // do a dry run in order to know the final size of the required array
-        const uint8_t max_count = 250;
-        while (i < size)
+        printf("obj_ID:%d  %d pixels, accepts a RLE compression, let's try it!", picture->objectId, size);
+        RLE_Element *rle_data = NULL;
+        if (picture->objectId == 1048 || picture->objectId == 289)
         {
-            if (count == max_count)
-            {
-                total_count += count;
-                count = 0;
-                changes++;
-            }
-            if (val == data[i])
-            {
-                count++;
-            }
-            else
-            {
-                changes++;
-                total_count += count;
-                val = data[i];
-                count = 1;
-            }
-            i++;
+            verbose = 1;
         }
-        total_count += count;
-        if (count > 0)
-            changes++;
-        printf("Total count: %d in %d pixels - %d transitions\n", total_count, size, changes);
-        if ((changes * 2 >= size))
+        uint8_t *new_data = RLE_Encode(data, size, &rle_data, verbose);
+
+        if (new_data)
         {
-            printf("Sorry dude, RLE isn't the best option for this object\nEncoding it RAW.\n");
-            picture->options &= ~((uint8_t)(1 << 3));
-        }
-        else
-        {
-            // RLE is suitable for this image, let's do it
+            int pair_idx = 0;
+            int final_count_check = 0;
+            int found_finish = 0;
+            while (!found_finish)
+            {
+                if (verbose)
+                {
+                    printf("Count:%d, val:%d\n", rle_data[pair_idx].count, rle_data[pair_idx].val);
+                }
+                final_count_check += rle_data[pair_idx].count;
+                if (rle_data[pair_idx].finish)
+                {
+                    found_finish = 1;
+                }
+                pair_idx++;
+            };
+
+            printf("Final count check: %d\n", final_count_check);
+
+            char filename[100];
+            mkdir("/tmp/pics", S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
+            sprintf(filename, "/tmp/pics/%d.bmp", picture->objectId);
+            WriteRLEtoBMP(rle_data, picture->actualWidth, picture->actualHeight, filename);
+            free(rle_data);
+            // free(data);
             picture->options |= 0x04;
-            new_data = (unsigned char *)malloc(changes * sizeof(uint16_t));
-            memset(new_data, 0x00, changes * 2);
-            val = data[0];
-            count = 1;
-            total_count = 0;
-            changes = 0;
-            i = 1;
-            // do a dry run in order to know the final size of the required array
-            while (i < size)
-            {
-                if (count == max_count)
-                {
-                    total_count += count;
-                    new_data[changes * 2] = count;
-                    new_data[changes * 2 + 1] = val;
-                    changes++;
-                    count = 0;
-                }
-                if (val == data[i])
-                {
-                    count++;
-                }
-                else
-                {
-                    new_data[changes * 2] = count;
-                    new_data[changes * 2 + 1] = val;
-                    changes++;
-                    total_count += count;
-                    val = data[i];
-                    count = 1;
-                }
-                i++;
-            }
-            if (count > 0)
-            {
-                new_data[changes * 2] = count;
-                new_data[changes * 2 + 1] = val;
-                changes++;
-            }
-            else
-            {
-                printf("Got no changes after the loop\n");
-            }
-
-            size = changes * 2;
             data = new_data;
+            size = pair_idx * 2;
+            printf("RLE compressed size: %d\n", size);
         }
     }
-
-    int bytes_to_alloc = ((size / 2) + 1) * sizeof(RLE_Element);
-    printf("Allocating %d bytes - %d transitions\n", bytes_to_alloc, size / 2);
-    RLE_Element *rle_data = (RLE_Element *)malloc(bytes_to_alloc);
-    for (int i = 0; i < (size / 2); i++)
-    {
-        rle_data[i].count = data[i * 2];
-        rle_data[i].val = data[i * 2 + 1];
-        rle_data[i].finish = 0;
-    }
-    rle_data[size / 2].finish = 1;
-    char filename[100];
-    mkdir("/tmp/pics", S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
-    sprintf(filename, "/tmp/pics/%d.bmp", picture->objectId);
-    WriteRLEtoBMP(rle_data, picture->actualWidth, picture->actualHeight, filename);
-    free(rle_data);
 
     //  int originalSize = getRealSize(*object);
     //  int startIndex = sizeof(PictureGraphic) + picture->rawDataLength;
@@ -1282,9 +1338,10 @@ void *createObject(int type, const char **attr)
     case 25: // FillAttributes
     {
         INIT_OBJECT(FillAttributes, fillAttributes);
-        
+
         fillAttributes->fillType = getFillType(attr);
-        if(fillAttributes->fillType!=3) {
+        if (fillAttributes->fillType != 3)
+        {
             printf("FA objectId: %i Setting fillPattern to 0xFFFF\n", fillAttributes->objectId);
             fillAttributes->fillPattern = 0xFFFF;
         }
