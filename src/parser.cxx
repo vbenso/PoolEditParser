@@ -481,8 +481,22 @@ void addObjectReference(void **object, ObjectReference objectReference, int role
     }
     if (role == ROLE_FILL_PATTERN)
     {
-        if (objectType == 25)
-            ((FillAttributes *)*object)->fillPattern = objectReference.objectId;
+        if (objectType == 25) 
+        {
+            FillAttributes *obj = ((FillAttributes *)*object);
+            printf("FA objectId: %d, fillType:%d\n", ((ObjectHeader *)*object)->objectId, obj->fillType);
+            
+            if(obj->fillType == 3) 
+            {
+                obj->fillPattern = objectReference.objectId;
+            } 
+            else 
+            {
+                obj->fillPattern = 0xFFFF;
+                printf("Object %i (Id=%i) fillType: %i, will have fill pattern 0xFFFF!\n",
+                    ((ObjectHeader *)*object)->type, ((ObjectHeader *)*object)->objectId, obj->fillType);
+            }
+        }
         else
             error = 1;
     }
@@ -1268,7 +1282,12 @@ void *createObject(int type, const char **attr)
     case 25: // FillAttributes
     {
         INIT_OBJECT(FillAttributes, fillAttributes);
+        
         fillAttributes->fillType = getFillType(attr);
+        if(fillAttributes->fillType!=3) {
+            printf("FA objectId: %i Setting fillPattern to 0xFFFF\n", fillAttributes->objectId);
+            fillAttributes->fillPattern = 0xFFFF;
+        }
         fillAttributes->fillColor = getFillColor(attr, vtColors);
         return fillAttributes;
     }
