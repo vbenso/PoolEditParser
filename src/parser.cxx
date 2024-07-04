@@ -1321,7 +1321,10 @@ void *createObject(int type, const char **attr)
         INIT_OBJECT(FontAttributes, fontAttributes);
         fontAttributes->fontColor = getFontColor(attr, vtColors);
         fontAttributes->fontSize = getFontSize(attr) + (int)(((multiplier)-1) * 3);
-        printf("oFS:%d - rFS:%d\n", getFontSize(attr), fontAttributes->fontSize);
+        if(fontAttributes->fontSize == 255) {
+            fontAttributes->fontSize = 0;
+        }
+        printf("id:%d: oFS:%d - rFS:%d\n", fontAttributes->objectId, getFontSize(attr), fontAttributes->fontSize);
         fontAttributes->fontType = getFontType(attr);
         fontAttributes->fontStyle = getFontStyle(attr);
 
